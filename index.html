@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tez İstatistik Danışmanlığı, SPSS Veri Analizi, R ve Python ile Akademik İstatistik Raporlama. Yüksek Lisans, Doktora ve Akademik Araştırmalar için Profesyonel İstatistiksel Destek.">
+    <meta name="keywords" content="tez istatistik danışmanlığı, SPSS veri analizi, akademik istatistik, biyoistatistik, R programlama, Python analiz, yapısal eşitlik modeli, regresyon analizi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://istatistik-danismanlik.com/">
+    <meta property="og:title" content="İstatistik Danışmanlık - Tez ve Akademik Araştırma İstatistik Hizmeti">
+    <meta property="og:description" content="Tez, Makale ve Araştırma Projeleriniz için SPSS, R ve Python ile Güvenilir Veri Analizi">
+    <meta property="og:image" content="https://istatistik-danismanlik.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://istatistik-danismanlik.com/">
+    <meta property="twitter:title" content="İstatistik Danışmanlık - Tez ve Akademik Araştırma İstatistik Hizmeti">
+    <meta property="twitter:description" content="Tez, Makale ve Araştırma Projeleriniz için SPSS, R ve Python ile Güvenilir Veri Analizi">
+    <meta property="twitter:image" content="https://istatistik-danismanlik.com/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://istatistik-danismanlik.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <title>İstatistik Danışmanlık - Tez ve Akademik Araştırma İstatistik Hizmeti</title>
+    
+    <!-- Font Awesome - CSS version (fixed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4169E1;
+            --primary-dark: #1e3a8a;
+            --secondary: #0ea5e9;
+            --accent: #4169E1;
+            --dark: #1a1d2e;
+            --light: #f8f9fa;
+            --gray: #6b7280;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: white;
+            padding: 3rem 0;
+            margin-top: -2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .service-card ul li {
+            padding: 0.6rem 0;
+            color: var(--gray);
+            display: flex;
+            align-items: start;
+            gap: 0.7rem;
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Sample Reports Section */
+        .sample-reports {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .report-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .report-content {
+            padding: 1.5rem;
+        }
+
+        .report-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .report-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .report-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: #e0e7ff;
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .view-report {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .view-report:hover {
+            gap: 0.8rem;
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .expertise-card {
+            background: var(--light);
+            padding: 1.8rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .expertise-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .expertise-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Tools Section */
+        .tools {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .tools-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .tool-item {
+            text-align: center;
+            transition: transform 0.3s;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            min-width: 140px;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-icon {
+            font-size: 3.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+        }
+
+        .tool-item h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* Quote Form Section */
+        .quote-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .quote-form-container {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+
+        .quote-form-title {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .quote-form-title i {
+            color: var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .form-group label .required {
+            color: #ef4444;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0 !important;
+            font-weight: 500 !important;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .char-count {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(65, 105, 225, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+
+        .form-message.error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        /* Special Needs Section */
+        .special-needs {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .special-needs h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .special-needs p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .special-btn {
+            background: white;
+            color: var(--primary);
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .special-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.2rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: #9ca3af;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            color: #9ca3af;
+        }
+
+        .contact-info-item i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quote-form-container {
+                padding: 1.5rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                İstatistik Danışmanlık
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#surec">Süreç</a></li>
+                <li><a href="#ornekler">Örnek Çalışmalar</a></li>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#teklif-al" class="nav-cta">Ücretsiz Teklif Al</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="container">
+            <h1>Akademik Araştırmanız İçin<br>Profesyonel İstatistiksel Danışmanlık</h1>
+            <p>Tez, Makale ve Araştırma Projeleriniz için SPSS, R ve Python ile Güvenilir Veri Analizi</p>
+            <div class="cta-buttons">
+                <a href="#teklif-al" class="btn btn-primary">Ücretsiz Teklif Alın</a>
+                <a href="#hizmetler" class="btn btn-secondary">Hizmetleri İnceleyin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Tamamlanan Tez</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Yayınlanan Makale</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8+</h3>
+                    <p>Yıllık Deneyim</p>
+                </div>
+                <div class="stat-item">
+                    <h3>%98</h3>
+                    <p>Müşteri Memnuniyeti</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2 class="section-title">İstatistiksel Danışmanlık Hizmetlerimiz</h2>
+            <p class="section-subtitle">Akademik araştırmanızın her aşamasında yanınızdayız</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Tez İstatistik Danışmanlığı</h3>
+                    <p>Yüksek lisans ve doktora tezleriniz için kapsamlı istatistiksel destek</p>
+                    <ul>
+                        <li>Araştırma tasarımı ve hipotez oluşturma</li>
+                        <li>Örneklem büyüklüğü hesaplama</li>
+                        <li>Veri toplama araçlarının geçerlilik ve güvenilirlik analizi</li>
+                        <li>Uygun istatistiksel yöntem seçimi</li>
+                        <li>Detaylı analiz ve yorumlama</li>
+                        <li>APA formatında raporlama</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Nicel Veri Analizi</h3>
+                    <p>Sayısal verilerinizi güçlü istatistiksel yöntemlerle analiz ediyoruz</p>
+                    <ul>
+                        <li>Tanımlayıcı istatistikler</li>
+                        <li>T-testi, ANOVA, MANOVA</li>
+                        <li>Regresyon analizi (Basit, Çoklu, Lojistik)</li>
+                        <li>Faktör analizi (AFA, DFA)</li>
+                        <li>Yapısal Eşitlik Modellemesi (YEM)</li>
+                        <li>Kümeleme ve Ayırma analizi</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Nitel Veri Analizi</h3>
+                    <p>Görüşme ve doküman verilerinizin sistematik analizi</p>
+                    <ul>
+                        <li>İçerik analizi</li>
+                        <li>Tematik analizi</li>
+                        <li>Betimsel analiz</li>
+                        <li>Kodlama ve kategorizasyon</li>
+                        <li>Bulguların raporlanması</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Biyoistatistik Danışmanlığı</h3>
+                    <p>Sağlık bilimleri araştırmaları için özel analiz hizmetleri</p>
+                    <ul>
+                        <li>Klinik çalışma tasarımı</li>
+                        <li>Survival analizi (Kaplan-Meier)</li>
+                        <li>ROC analizi ve tanısal testler</li>
+                        <li>Epidemiyolojik analizler</li>
+                        <li>Güç analizi ve örneklem hesaplama</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>İleri Düzey Programlama</h3>
+                    <p>R ve Python ile özelleştirilmiş analiz çözümleri</p>
+                    <ul>
+                        <li>Makine öğrenmesi modelleri</li>
+                        <li>Zaman serisi analizi</li>
+                        <li>Veri görselleştirme (ggplot2, matplotlib)</li>
+                        <li>Özel script yazımı</li>
+                        <li>Tekrarlanabilir analiz (R Markdown)</li>
+                        <li>Büyük veri analizi</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Danışmanlık ve Mentorluk</h3>
+                    <p>İstatistiksel yöntemleri anlamanız için rehberlik</p>
+                    <ul>
+                        <li>İstatistiksel yöntemler danışmanlığı</li>
+                        <li>Analiz sonuçlarını yorumlama</li>
+                        <li>Makale yazım desteği</li>
+                        <li>Metodoloji geliştirme</li>
+                        <li>Araştırma tasarımı desteği</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="surec" class="process">
+        <div class="container">
+            <h2 class="section-title">Çalışma Sürecimiz</h2>
+            <p class="section-subtitle">Şeffaf ve adım adım ilerleyen profesyonel bir süreç</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>İlk Görüşme</h3>
+                    <p>Araştırmanızı, hedeflerinizi ve ihtiyaçlarınızı detaylı olarak dinliyoruz. Ücretsiz ön değerlendirme yapıyoruz.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Veri İnceleme</h3>
+                    <p>Verilerinizi inceliyor, uygun analiz yöntemlerini belirliyoruz. Detaylı bir çalışma planı ve fiyat teklifi sunuyoruz.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Veri Hazırlama</h3>
+                    <p>Verilerinizi temizliyor, kodluyor ve analize hazır hale getiriyoruz. Eksik veriler ve uç değerler kontrol ediliyor.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>İstatistiksel Analiz</h3>
+                    <p>Belirlenen yöntemlerle analizleri gerçekleştiriyoruz. Varsayımlar kontrol ediliyor, sonuçlar doğrulanıyor.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Raporlama</h3>
+                    <p>Tüm analizleri, tabloları ve grafikleri içeren detaylı bir rapor hazırlıyoruz. APA formatında sunuyoruz.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <h3>Sunum ve Revizyon</h3>
+                    <p>Sonuçları sizinle paylaşıyor, yorumluyoruz. Gerekli revizyonları ücretsiz olarak yapıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Reports Section -->
+    <section id="ornekler" class="sample-reports">
+        <div class="container">
+            <h2 class="section-title">Örnek Çalışmalarımız</h2>
+            <p class="section-subtitle">Daha önce gerçekleştirdiğimiz analiz örnekleri</p>
+            
+            <div class="reports-grid">
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>Yapısal Eşitlik Modeli Analizi</h4>
+                        <p>Eğitim bilimleri alanında gerçekleştirilen ölçek geliştirme ve YEM analizi raporu. Doğrulayıcı faktör analizi ve path analizi içermektedir.</p>
+                        <div class="report-tags">
+                            <span class="tag">YEM</span>
+                            <span class="tag">DFA</span>
+                            <span class="tag">AMOS</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>Regresyon ve Mediation Analizi</h4>
+                        <p>Psikoloji alanında gerçekleştirilen çoklu regresyon ve aracılık etkisi analizi. PROCESS makro ile detaylı raporlama.</p>
+                        <div class="report-tags">
+                            <span class="tag">Regresyon</span>
+                            <span class="tag">Mediation</span>
+                            <span class="tag">SPSS</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>Klinik Çalışma Biyoistatistik Raporu</h4>
+                        <p>Hemşirelik alanında gerçekleştirilen deneysel çalışma analizi. Survival analizi ve tanısal test değerlendirmesi içermektedir.</p>
+                        <div class="report-tags">
+                            <span class="tag">Survival</span>
+                            <span class="tag">ROC</span>
+                            <span class="tag">R</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>Karma Yöntem Araştırma Analizi</h4>
+                        <p>Sosyal bilimler alanında nicel ve nitel verilerin birlikte analiz edildiği karma yöntem araştırma raporu.</p>
+                        <div class="report-tags">
+                            <span class="tag">Karma Yöntem</span>
+                            <span class="tag">İçerik Analizi</span>
+                            <span class="tag">SPSS</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>ANOVA ve Post-Hoc Testler</h4>
+                        <p>Spor bilimleri alanında gerçekleştirilen deneysel çalışma. Tekrarlı ölçümler ANOVA ve çoklu karşılaştırma testleri.</p>
+                        <div class="report-tags">
+                            <span class="tag">ANOVA</span>
+                            <span class="tag">Post-Hoc</span>
+                            <span class="tag">Jamovi</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <div class="report-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="report-content">
+                        <h4>Machine Learning Modelleme</h4>
+                        <p>Python ile gerçekleştirilen tahminsel modelleme çalışması. Random Forest ve XGBoost algoritmaları ile analiz.</p>
+                        <div class="report-tags">
+                            <span class="tag">ML</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                        <a href="#teklif-al" class="view-report">Rapor İste <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="hakkimda" class="expertise">
+        <div class="container">
+            <h2 class="section-title">Uzmanlık Alanlarım</h2>
+            <p class="section-subtitle">Çeşitli disiplinlerde geniş deneyim</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>Eğitim Bilimleri</h4>
+                    <p>Eğitim programları, öğretim yöntemleri, ölçme ve değerlendirme çalışmaları</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Psikoloji</h4>
+                    <p>Ölçek geliştirme, psikolojik testler, klinik ve deneysel psikoloji araştırmaları</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Sağlık Bilimleri</h4>
+                    <p>Hemşirelik, tıp, beslenme, fizyoterapi, halk sağlığı çalışmaları</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Sosyal Bilimler</h4>
+                    <p>Sosyoloji, işletme, ekonomi, siyaset bilimi, kamu yönetimi araştırmaları</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Mühendislik</h4>
+                    <p>Deneysel tasarım, kalite kontrolü, optimizasyon çalışmaları</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Spor Bilimleri</h4>
+                    <p>Performans analizi, antrenman etkileri, spor psikolojisi çalışmaları</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="container">
+            <h2 class="section-title">Kullandığım Profesyonel Araçlar</h2>
+            <p class="section-subtitle">En güncel ve güçlü istatistik yazılımları</p>
+            
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>SPSS</h4>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-r-project"></i>
+                    </div>
+                    <h4>R</h4>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h4>Jamovi</h4>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>Python</h4>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h4>AMOS</h4>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Stata</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="teklif-al" class="quote-section">
+        <div class="container">
+            <h2 class="section-title">Ücretsiz Teklif Alın</h2>
+            <p class="section-subtitle">Projeniz hakkında bilgi verin, size özel bir teklif hazırlayalım</p>
+            
+            <div class="quote-form-container">
+                <div class="quote-form-title">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Teklif Formu</h3>
+                </div>
+                
+                <div id="formMessage" class="form-message"></div>
+                
+                <form class="quote-form" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="quote">
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+
+                    <div class="form-group">
+                        <label>Ad Soyad <span class="required">*</span></label>
+                        <input type="text" name="name" placeholder="Adınız ve soyadınız" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-posta <span class="required">*</span></label>
+                        <input type="email" name="email" placeholder="ornek@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="tel" name="phone" placeholder="+90 555 123 45 67">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Proje Türü <span class="required">*</span></label>
+                        <select name="project-type" required>
+                            <option value="">Seçiniz</option>
+                            <option value="yuksek-lisans">Yüksek Lisans Tezi</option>
+                            <option value="doktora">Doktora Tezi</option>
+                            <option value="makale">Makale</option>
+                            <option value="proje">Araştırma Projesi</option>
+                            <option value="diger">Diğer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Veri Boyutu</label>
+                        <select name="data-size">
+                            <option value="">Seçiniz</option>
+                            <option value="kucuk">Küçük (< 100 kişi)</option>
+                            <option value="orta">Orta (100-500 kişi)</option>
+                            <option value="buyuk">Büyük (> 500 kişi)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Teslim Tarihi</label>
+                        <input type="date" name="deadline">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tercih Edilen Yazılım <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="spss" name="software[]" value="SPSS">
+                                <label for="spss">SPSS</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="r" name="software[]" value="R">
+                                <label for="r">R</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="python" name="software[]" value="Python">
+                                <label for="python">Python</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="amos" name="software[]" value="AMOS">
+                                <label for="amos">AMOS</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="jamovi" name="software[]" value="Jamovi">
+                                <label for="jamovi">Jamovi</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="stata" name="software[]" value="Stata">
+                                <label for="stata">Stata</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Proje Detayları <span class="required">*</span></label>
+                        <textarea id="projectDetails" name="details" placeholder="Projenizin detaylarını, ihtiyaç duyduğunuz analizleri ve özel gereksinimlerinizi açıklayın... (Maksimum 500 karakter)" maxlength="500" required></textarea>
+                        <div class="char-count"><span id="charCount">0</span>/500</div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        Ücretsiz Teklif Al
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Needs Section -->
+    <section class="special-needs">
+        <div class="container">
+            <h2>Özel İhtiyacınız mı Var?</h2>
+            <p>Listelenen hizmetler dışında özel analiz ihtiyaçlarınız için destek arıyorsanız,<br>spesifik gereksinimlerinizi değerlendirmek üzere size özel çözümler sunuyoruz.</p>
+            <a href="#teklif-al" class="special-btn">
+                <i class="fas fa-comments"></i>
+                Özel Danışmanlık Talep Et
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>İstatistik Danışmanlık</h3>
+                    <p>Akademik araştırmalarınızda güvenilir istatistiksel analiz ve danışmanlık hizmeti sunuyoruz. Tez, makale ve projeleriniz için profesyonel destek.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:info@istatistikdanismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="#hizmetler">Tez İstatistik</a></li>
+                        <li><a href="#hizmetler">SPSS Analizi</a></li>
+                        <li><a href="#hizmetler">R Programlama</a></li>
+                        <li><a href="#hizmetler">Python Analiz</a></li>
+                        <li><a href="#hizmetler">Biyoistatistik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@istatistikdanismanlik.com">info@istatistikdanismanlik.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+905348674768">+90 534 867 47 68</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>7/24 Online Destek</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 İstatistik Danışmanlık. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        // Character counter for textarea
+        const textarea = document.getElementById('projectDetails');
+        const charCount = document.getElementById('charCount');
+        
+        if (textarea && charCount) {
+            textarea.addEventListener('input', function() {
+                charCount.textContent = this.value.length;
+            });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    }
+                }
+            });
+        });
+
+        // Form submission message handling
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = 'Teşekkürler! Talebiniz başarıyla alındı. En kısa sürede size dönüş yapacağız.';
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Remove URL parameter
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+</body>
+</html>
