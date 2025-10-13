@@ -28,6 +28,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-90RQCKY6W9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-90RQCKY6W9'); // <-- Burayı kendi Google Analytics Takip Kodunuz ile değiştirin (örn: G-XXXXXXXXXX)
+    </script>
+    <!-- End Google Analytics -->
+    
     <title>İstatistik Danışmanlık - Tez ve Akademik Araştırma İstatistik Hizmeti</title>
     
     <!-- Font Awesome - CSS version (fixed) -->
@@ -898,7 +909,7 @@
         <div class="container">
             <div class="stats">
                 <div class="stat-item">
-                    <h3>200+</h3>
+                    <h3>70+</h3>
                     <p>Tamamlanan Tez</p>
                 </div>
                 <div class="stat-item">
@@ -910,7 +921,7 @@
                     <p>Yıllık Deneyim</p>
                 </div>
                 <div class="stat-item">
-                    <h3>%98</h3>
+                    <h3>%97</h3>
                     <p>Müşteri Memnuniyeti</p>
                 </div>
             </div>
@@ -1302,6 +1313,15 @@
                         <div class="char-count"><span id="charCount">0</span>/500</div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="checkbox-item" style="align-items: flex-start; gap: 0.8rem;">
+                            <input type="checkbox" id="kvkk" name="kvkk-onay" value="kabul" required style="margin-top: 5px; transform: scale(1.2);">
+                            <label for="kvkk" style="font-size: 0.85rem; line-height: 1.5; font-weight: 500;">
+                                <a href="gizlilik-politikasi.html" target="_blank" style="color: var(--primary);">Gizlilik Politikası ve KVKK Aydınlatma Metni</a>'ni okudum, anladım ve kişisel verilerimin bu kapsamda işlenmesini kabul ediyorum. <span class="required">*</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <button type="submit" class="submit-btn" id="submitBtn">
                         <i class="fas fa-paper-plane"></i>
                         Ücretsiz Teklif Al
@@ -1332,7 +1352,7 @@
                     <p>Akademik araştırmalarınızda güvenilir istatistiksel analiz ve danışmanlık hizmeti sunuyoruz. Tez, makale ve projeleriniz için profesyonel destek.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://x.com/_aliyalcinkaya" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="mailto:info@istatistik-danismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -1436,4 +1456,6 @@
 </body>
 
 </html>
+
+
 
