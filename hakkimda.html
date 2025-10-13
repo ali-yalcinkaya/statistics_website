@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda - İstatistik Danışmanlık</title>
+    <meta name="description" content="Ali Yalçınkaya hakkında bilgiler. Psikoloji ve Nörobilim alanında uzman, profesyonel istatistik danışmanı.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Ana sayfa ile tutarlı stil kodları */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #4169E1;
+            --primary-dark: #1e3a8a;
+            --secondary: #0ea5e9;
+            --accent: #4169E1;
+            --dark: #1a1d2e;
+            --light: #f8f9fa;
+            --gray: #6b7280;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-bottom: 1px solid #e5e7eb;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-1px);
+        }
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hakkımda Sayfası İçerik Stilleri */
+        .about-section {
+            padding: 5rem 0;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+        .about-content h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+        .about-content h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        .about-content p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-content strong {
+            color: var(--dark);
+        }
+        
+        /* Footer Stilleri */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 { margin-bottom: 1.2rem; color: white; font-weight: 600; font-size: 1.1rem; }
+        .footer-section p { color: #9ca3af; line-height: 1.8; font-size: 0.95rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 0.8rem; }
+        .footer-section a { color: #9ca3af; text-decoration: none; transition: color 0.3s; font-size: 0.95rem; }
+        .footer-section a:hover { color: white; }
+        .contact-info-item { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; color: #9ca3af; }
+        .contact-info-item i { color: var(--primary); font-size: 1.1rem; }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .social-links a:hover { background: var(--primary); transform: translateY(-3px); }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid #374151; color: #9ca3af; font-size: 0.9rem; }
+
+        /* Mobil Uyum Stilleri */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+                gap: 1rem;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .about-content {
+                padding: 1.5rem;
+            }
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-line"></i>
+                İstatistik Danışmanlık
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="index.html#surec">Süreç</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="index.html#teklif-al" class="nav-cta">Ücretsiz Teklif Al</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h1>Hakkımda</h1>
+                    <p>Merhaba, ben Ali Yalçınkaya. Psikoloji ve Nörobilim alanlarındaki güçlü akademik altyapımı, uzun yıllara dayanan veri analizi deneyimimle birleştirerek, tez, makale ve araştırma projeleri için profesyonel istatistik danışmanlığı hizmeti sunuyorum. Akademik sürecin en kritik noktası, doğru metodoloji ve güvenilir istatistiksel analizdir. Benim amacım, karmaşık veri setlerinizi bilimsel olarak anlamlı, yayınlanabilir ve etkileyici sonuçlara dönüştürmektir.</p>
+                    
+                    <h2>🎓 Eğitim ve Uzmanlık</h2>
+                    <p>İstanbul Medipol Üniversitesi Psikoloji lisans eğitimimi onur derecesiyle tamamladım. Ardından Nörobilim yüksek lisansımı aynı üniversitede bitirerek, şu anda doktora eğitimime devam ediyorum. Eğitim sürecim boyunca SPSS, R, Python ve MATLAB üzerinde ileri düzey analiz teknikleri konusunda uzmanlaştım.</p>
+                    
+                    <h2>🏛️ Araştırma Deneyimi</h2>
+                    <p>Alanya Alaaddin Keykubat Üniversitesi ve İstanbul Medipol Üniversitesi bünyesinde, hem üniversite laboratuvarlarında hem de araştırma hastaneleri gibi klinik ortamlarda araştırmacı olarak görev aldım. Bu süreçte fMRI, EEG, tDCS ve tACS gibi nörogörüntüleme ve nöromodülasyon verilerinin, <strong>hesaplamalı nörobilim yaklaşımlarıyla</strong> analizini yönettim. <strong>Doğrudan hasta ve katılımcılardan toplanan bu tür verilerle</strong> çalışma deneyimim, sadece istatistiksel hesaplama değil, aynı zamanda verinin bilimsel yorumlanması ve akademik anlamda raporlaştırılması konusunda da güçlü bir birikim kazandırdı.</p>
+                    
+                    <h2>📈 Yayınlar ve Akademik Katkı</h2>
+                    <p>Katkıda bulunduğum çalışmaların Q1 kategorisindeki uluslararası dergilerde yayımlanması ve bulgularının önde gelen kongrelerde sunulması, analiz süreçlerimde uyguladığım bilimsel titizliğin ve kalite standartlarının bir yansımasıdır.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>İstatistik Danışmanlık</h3>
+                    <p>Akademik araştırmalarınızda güvenilir istatistiksel analiz ve danışmanlık hizmeti sunuyoruz. Tez, makale ve projeleriniz için profesyonel destek.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:info@istatistikdanismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="index.html#hizmetler">Tez İstatistik</a></li>
+                        <li><a href="index.html#hizmetler">SPSS Analizi</a></li>
+                        <li><a href="index.html#hizmetler">R Programlama</a></li>
+                        <li><a href="index.html#hizmetler">Python Analiz</a></li>
+                        <li><a href="index.html#hizmetler">Biyoistatistik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@istatistikdanismanlik.com">info@istatistikdanismanlik.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+905348674768">+90 534 867 47 68</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>7/24 Online Destek</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 İstatistik Danışmanlık. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+    </script>
+</body>
+</html>
