@@ -217,6 +217,39 @@ footer {
 .form-message.error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
 /* -------------------------------------------------------------------------- */
+/* TOOLS SECTION (index.html'e özel)                                          */
+/* -------------------------------------------------------------------------- */
+.tools { padding: 5rem 0; background: var(--light); }
+.tools-grid { display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem; }
+.tool-item { text-align: center; transition: transform 0.3s; background: white; padding: 2rem 2.5rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); min-width: 140px; }
+.tool-item:hover { transform: translateY(-5px); }
+.tool-icon { font-size: 3.5rem; margin-bottom: 0.8rem; color: var(--primary); }
+.tool-item h4 { font-size: 1.1rem; color: var(--dark); font-weight: 600; }
+
+/* -------------------------------------------------------------------------- */
+/* SPECIAL NEEDS SECTION (index.html'e özel)                                  */
+/* -------------------------------------------------------------------------- */
+.special-needs { padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; }
+.special-needs h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: 700; }
+.special-needs p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto; }
+.special-btn { background: white; color: var(--primary); padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s; }
+.special-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,255,255,0.3); }
+
+/* -------------------------------------------------------------------------- */
+/* MÜŞTERİ YORUMLARI BÖLÜMÜ (index.html'e özel)                               */
+/* -------------------------------------------------------------------------- */
+.testimonials { padding: 5rem 0; background: var(--light); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.testimonial-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-left: 5px solid var(--primary); display: flex; flex-direction: column; }
+.testimonial-author { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.author-photo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid #e0e7ff; }
+.author-name { font-size: 1.1rem; font-weight: 600; color: var(--dark); margin: 0; }
+.author-title { font-size: 0.9rem; color: var(--gray); margin: 0; }
+.testimonial-text { font-style: italic; color: var(--gray); flex-grow: 1; margin-bottom: 1.5rem; line-height: 1.8; }
+.testimonial-text::before { content: '"'; font-size: 2.5rem; color: var(--primary); font-weight: bold; float: left; margin-right: 0.5rem; line-height: 1; }
+.testimonial-rating { color: #f59e0b; font-size: 1rem; text-align: right; }
+
+/* -------------------------------------------------------------------------- */
 /* BLOG SAYFASI BÖLÜMLERİ (blog.html ve yazi-sablonu.html'e özel)             */
 /* -------------------------------------------------------------------------- */
 .blog-header { background: var(--white); padding: 4rem 0; text-align: center; border-bottom: 1px solid #e5e7eb; }
@@ -261,20 +294,6 @@ footer {
 .post-full-content li { margin-bottom: 0.8rem; }
 .post-full-content strong { color: var(--dark); }
 .post-full-content a { color: var(--primary); text-decoration: underline; }
-
-/* -------------------------------------------------------------------------- */
-/* MÜŞTERİ YORUMLARI BÖLÜMÜ (index.html'e özel)                               */
-/* -------------------------------------------------------------------------- */
-.testimonials { padding: 5rem 0; background: var(--light); }
-.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
-.testimonial-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-left: 5px solid var(--primary); display: flex; flex-direction: column; }
-.testimonial-author { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-.author-photo { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 3px solid #e0e7ff; }
-.author-name { font-size: 1.1rem; font-weight: 600; color: var(--dark); margin: 0; }
-.author-title { font-size: 0.9rem; color: var(--gray); margin: 0; }
-.testimonial-text { font-style: italic; color: var(--gray); flex-grow: 1; margin-bottom: 1.5rem; line-height: 1.8; }
-.testimonial-text::before { content: '“'; font-size: 2.5rem; color: var(--primary); font-weight: bold; float: left; margin-right: 0.5rem; line-height: 1; }
-.testimonial-rating { color: #f59e0b; font-size: 1rem; text-align: right; }
 
 /* -------------------------------------------------------------------------- */
 /* HAKKIMDA SAYFASI (hakkimda.html'e özel)                                    */
@@ -337,10 +356,11 @@ footer {
 .cookie-toggle { position: relative; display: inline-block; width: 50px; height: 26px; }
 .cookie-toggle input { opacity: 0; width: 0; height: 0; }
 .cookie-toggle-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: 0.4s; border-radius: 34px; }
-.cookie-toggle-slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 4px; bottom: 4px; background-color: white; transition: 0.4s; border-radius: 50%; }
+.cookie-toggle-slider:before { position: absolute; content: ""; height: 18px; width: 18px; left:
+4px; bottom: 4px; background-color: white; transition: 0.4s; border-radius: 50%; }
 .cookie-toggle input:checked + .cookie-toggle-slider { background-color: #4169E1; }
 .cookie-toggle input:checked + .cookie-toggle-slider:before { transform: translateX(24px); }
 .cookie-toggle input:disabled + .cookie-toggle-slider { opacity: 0.5; cursor: not-allowed; }
 .cookie-modal-footer { display: flex; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e5e7eb; }
 .cookie-modal-footer .cookie-btn { flex: 1; }
-@media (max-width: 768px) { .cookie-consent-container { flex-direction: column; align-items: stretch; gap: 1.5rem; } .cookie-consent-buttons { flex-direction: column; } .cookie-btn { width: 100%; } .cookie-modal-footer { flex-direction: column; } }
+@media (max-width: 768px) { .cookie-consent-container { flex-direction: column; align-items: stretch; gap: 1.5rem; } .cookie-consent-buttons { flex-direction: column; } .cookie-btn { width: 100%; } .cookie-modal-footer { flex-direction: column; } }    
