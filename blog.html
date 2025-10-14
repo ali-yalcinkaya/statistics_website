@@ -5,85 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - İstatistik Danışmanlık</title>
     <meta name="description" content="Akademik istatistik, veri analizi ve SPSS üzerine makaleler, ipuçları ve kaynaklar.">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css"> <style>
-        /* Ana stil dosyanızdaki stiller burada da geçerli olacak.
-           Eğer style.css gibi harici bir dosya kullanmıyorsanız,
-           index.html'deki <style> etiketinin içeriğini buraya kopyalayabilirsiniz.
-           Aşağıda sadece bu sayfaya özel ek stiller bulunmaktadır. */
-        .blog-header {
-            background: var(--light);
-            padding: 4rem 0;
-            text-align: center;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        .blog-header h1 {
-            font-size: 2.5rem;
-            color: var(--dark);
-        }
-        .blog-header p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-top: 0.5rem;
-        }
-        .blog-section {
-            padding: 5rem 0;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        .blog-post-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            transition: all 0.3s;
-            border: 1px solid #e5e7eb;
-        }
-        .blog-post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        .post-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .post-content {
-            padding: 1.5rem;
-        }
-        .post-meta {
-            font-size: 0.85rem;
-            color: var(--gray);
-            margin-bottom: 0.8rem;
-        }
-        .post-meta .post-date {
-            margin-right: 1rem;
-        }
-        .post-title {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
-        .post-excerpt {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-        }
-        .read-more-btn {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .read-more-btn:hover {
-            text-decoration: underline;
-        }
-    </style>
+    
+    <!-- Merkezi Stil Dosyası -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
@@ -97,6 +27,7 @@
                 <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="index.html#hizmetler">Hizmetler</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#yorumlar">Yorumlar</a></li>
                 <li><a href="hakkimda.html">Hakkımda</a></li>
                 <li><a href="index.html#teklif-al" class="nav-cta">Ücretsiz Teklif Al</a></li>
             </ul>
@@ -104,6 +35,7 @@
     </header>
 
     <main>
+        <!-- Blog Başlık Alanı -->
         <section class="blog-header">
             <div class="container">
                 <h1>Blog</h1>
@@ -111,11 +43,13 @@
             </div>
         </section>
 
+        <!-- Blog Yazıları Alanı -->
         <section class="blog-section">
             <div class="container">
                 <div class="blog-grid">
+                    <!-- Örnek Blog Yazısı 1 -->
                     <article class="blog-post-card">
-                        <img src="https://via.placeholder.com/400x250" alt="Blog Yazısı Resmi" class="post-image">
+                        <img src="https://placehold.co/600x400/667eea/ffffff?text=İstatistik" alt="Doğru istatistiksel test seçimi" class="post-image">
                         <div class="post-content">
                             <div class="post-meta">
                                 <span class="post-date"><i class="far fa-calendar"></i> 15 Ekim 2025</span>
@@ -126,8 +60,9 @@
                         </div>
                     </article>
 
+                    <!-- Örnek Blog Yazısı 2 -->
                     <article class="blog-post-card">
-                        <img src="https://via.placeholder.com/400x250" alt="Blog Yazısı Resmi" class="post-image">
+                        <img src="https://placehold.co/600x400/764ba2/ffffff?text=SPSS" alt="SPSS Veri Temizliği" class="post-image">
                         <div class="post-content">
                             <div class="post-meta">
                                 <span class="post-date"><i class="far fa-calendar"></i> 01 Ekim 2025</span>
@@ -138,14 +73,148 @@
                         </div>
                     </article>
                     
-                    </div>
+                     <!-- Örnek Blog Yazısı 3 -->
+                    <article class="blog-post-card">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=R+Programlama" alt="R Programlama ile Veri Görselleştirme" class="post-image">
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> 25 Eylül 2025</span>
+                            </div>
+                            <h2 class="post-title">R ile Etkileyici Veri Görselleştirme Teknikleri</h2>
+                            <p class="post-excerpt">ggplot2 paketi kullanarak akademik yayın kalitesinde grafikler oluşturmanın temelleri. Verilerinizi hikayeye dönüştürün.</p>
+                            <a href="#" class="read-more-btn">Devamını Oku &rarr;</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        </footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>İstatistik Danışmanlık</h3>
+                    <p>Akademik araştırmalarınızda güvenilir istatistiksel analiz ve danışmanlık hizmeti sunuyoruz. Tez, makale ve projeleriniz için profesyonel destek.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/_aliyalcinkaya" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:info@istatistik-danismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
 
+                <div class="footer-section">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="index.html#hizmetler">Tez İstatistik</a></li>
+                        <li><a href="index.html#hizmetler">SPSS Analizi</a></li>
+                        <li><a href="index.html#hizmetler">R Programlama</a></li>
+                        <li><a href="index.html#hizmetler">Python Analiz</a></li>
+                        <li><a href="index.html#hizmetler">Biyoistatistik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@istatistik-danismanlik.com">info@istatistik-danismanlik.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+905348674768">+90 534 867 47 68</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 İstatistik Danışmanlık. Tüm hakları saklıdır.</p>
+                <div class="footer-legal-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="cerez-politikasi.html">Çerez Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Çerez Banner HTML -->
+    <div id="cookie-consent-banner">
+        <div class="cookie-consent-container">
+            <div class="cookie-consent-text">
+                <h3><i class="fas fa-cookie-bite"></i> Çerezleri Kullanıyoruz</h3>
+                <p>Web sitemizde size en iyi deneyimi sunabilmek için çerezleri kullanıyoruz. Detaylı bilgi için <a href="cerez-politikasi.html" target="_blank">Çerez Politikamızı</a> inceleyebilirsiniz.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">
+                    <i class="fas fa-check"></i> Tümünü Kabul Et
+                </button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">
+                    Reddet
+                </button>
+                <button class="cookie-btn-settings" onclick="openCookieSettings()">
+                    Ayarlar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Çerez Ayarları Modal -->
+    <div id="cookie-settings-modal">
+        <div class="cookie-modal-content">
+            <div class="cookie-modal-header">
+                <h2>Çerez Ayarları</h2>
+                <button class="cookie-modal-close" onclick="closeCookieSettings()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <h3><i class="fas fa-shield-alt"></i> Zorunlu Çerezler</h3>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <p>Web sitesinin temel işlevleri için gerekli çerezlerdir. Bu çerezler devre dışı bırakılamaz.</p>
+            </div>
+
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <h3><i class="fas fa-chart-line"></i> Analitik Çerezler</h3>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="analytics-cookies" onchange="updateCookiePreferences()">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <p>Ziyaretçi davranışlarını anlamamıza ve site performansını iyileştirmemize yardımcı olan çerezlerdir (Google Analytics).</p>
+            </div>
+
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <h3><i class="fas fa-bullhorn"></i> Pazarlama Çerezleri</h3>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="marketing-cookies" onchange="updateCookiePreferences()">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </div>
+                <p>Hedefli reklamlar göstermek ve reklam kampanyalarının etkinliğini ölçmek için kullanılan çerezlerdir (Google Ads).</p>
+            </div>
+
+            <div class="cookie-modal-footer">
+                <button class="cookie-btn cookie-btn-reject" onclick="saveAndClose()">
+                    <i class="fas fa-save"></i> Kaydet ve Kapat
+                </button>
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptAllFromModal()">
+                    <i class="fas fa-check-double"></i> Tümünü Kabul Et
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scriptler -->
     <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -160,17 +229,7 @@
             });
         }
 
-        // Character counter for textarea
-        const textarea = document.getElementById('projectDetails');
-        const charCount = document.getElementById('charCount');
-        
-        if (textarea && charCount) {
-            textarea.addEventListener('input', function() {
-                charCount.textContent = this.value.length;
-            });
-        }
-
-        // Smooth scroll
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -180,7 +239,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     if (navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
                         const icon = mobileMenuToggle.querySelector('i');
@@ -190,534 +248,104 @@
                 }
             });
         });
-
-        // Form submission message handling
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            const formMessage = document.getElementById('formMessage');
-            formMessage.textContent = 'Teşekkürler! Talebiniz başarıyla alındı. En kısa sürede size dönüş yapacağız.';
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
-            
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // Remove URL parameter
-            window.history.replaceState({}, document.title, window.location.pathname);
-        }
     </script>
-    <style>
-/* Çerez Banner Stilleri */
-#cookie-consent-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #1a1d2e;
-    color: white;
-    padding: 1.5rem;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: none;
-    animation: slideUp 0.5s ease-out;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-.cookie-consent-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.cookie-consent-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.cookie-consent-text h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: white;
-}
-
-.cookie-consent-text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #d1d5db;
-    margin: 0;
-}
-
-.cookie-consent-text a {
-    color: #4169E1;
-    text-decoration: underline;
-}
-
-.cookie-consent-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.cookie-btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-family: inherit;
-}
-
-.cookie-btn-accept {
-    background: #4169E1;
-    color: white;
-}
-
-.cookie-btn-accept:hover {
-    background: #1e3a8a;
-    transform: translateY(-2px);
-}
-
-.cookie-btn-reject {
-    background: transparent;
-    color: white;
-    border: 2px solid rgba(255,255,255,0.3);
-}
-
-.cookie-btn-reject:hover {
-    border-color: white;
-    background: rgba(255,255,255,0.1);
-}
-
-.cookie-btn-settings {
-    background: transparent;
-    color: #9ca3af;
-    border: none;
-    padding: 0.75rem 1rem;
-    text-decoration: underline;
-}
-
-.cookie-btn-settings:hover {
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .cookie-consent-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1.5rem;
-    }
-    
-    .cookie-consent-buttons {
-        flex-direction: column;
-    }
-    
-    .cookie-btn {
-        width: 100%;
-    }
-}
-
-/* Çerez Ayarları Modal */
-#cookie-settings-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 10000;
-    overflow-y: auto;
-    padding: 2rem;
-}
-
-.cookie-modal-content {
-    background: white;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 12px;
-    padding: 2rem;
-    position: relative;
-}
-
-.cookie-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-.cookie-modal-header h2 {
-    font-size: 1.8rem;
-    color: #1a1d2e;
-    margin: 0;
-}
-
-.cookie-modal-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #6b7280;
-    padding: 0.5rem;
-    line-height: 1;
-}
-
-.cookie-modal-close:hover {
-    color: #1a1d2e;
-}
-
-.cookie-category {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-.cookie-category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.cookie-category h3 {
-    font-size: 1.1rem;
-    color: #1a1d2e;
-    margin: 0;
-}
-
-.cookie-category p {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin: 0.5rem 0 0 0;
-    line-height: 1.5;
-}
-
-.cookie-toggle {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-}
-
-.cookie-toggle input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.cookie-toggle-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.cookie-toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-.cookie-toggle input:checked + .cookie-toggle-slider {
-    background-color: #4169E1;
-}
-
-.cookie-toggle input:checked + .cookie-toggle-slider:before {
-    transform: translateX(24px);
-}
-
-.cookie-toggle input:disabled + .cookie-toggle-slider {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.cookie-modal-footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 2px solid #e5e7eb;
-}
-
-.cookie-modal-footer .cookie-btn {
-    flex: 1;
-}
-
-@media (max-width: 768px) {
-    .cookie-modal-footer {
-        flex-direction: column;
-    }
-}
-</style>
-
-<!-- Çerez Banner HTML -->
-<div id="cookie-consent-banner">
-    <div class="cookie-consent-container">
-        <div class="cookie-consent-text">
-            <h3><i class="fas fa-cookie-bite"></i> Çerezleri Kullanıyoruz</h3>
-            <p>Web sitemizde size en iyi deneyimi sunabilmek için çerezleri kullanıyoruz. Detaylı bilgi için <a href="cerez-politikasi.html" target="_blank">Çerez Politikamızı</a> inceleyebilirsiniz.</p>
-        </div>
-        <div class="cookie-consent-buttons">
-            <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">
-                <i class="fas fa-check"></i> Tümünü Kabul Et
-            </button>
-            <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">
-                Reddet
-            </button>
-            <button class="cookie-btn-settings" onclick="openCookieSettings()">
-                Ayarlar
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Çerez Ayarları Modal -->
-<div id="cookie-settings-modal">
-    <div class="cookie-modal-content">
-        <div class="cookie-modal-header">
-            <h2>Çerez Ayarları</h2>
-            <button class="cookie-modal-close" onclick="closeCookieSettings()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-
-        <div class="cookie-category">
-            <div class="cookie-category-header">
-                <h3><i class="fas fa-shield-alt"></i> Zorunlu Çerezler</h3>
-                <label class="cookie-toggle">
-                    <input type="checkbox" checked disabled>
-                    <span class="cookie-toggle-slider"></span>
-                </label>
-            </div>
-            <p>Web sitesinin temel işlevleri için gerekli çerezlerdir. Bu çerezler devre dışı bırakılamaz.</p>
-        </div>
-
-        <div class="cookie-category">
-            <div class="cookie-category-header">
-                <h3><i class="fas fa-chart-line"></i> Analitik Çerezler</h3>
-                <label class="cookie-toggle">
-                    <input type="checkbox" id="analytics-cookies" onchange="updateCookiePreferences()">
-                    <span class="cookie-toggle-slider"></span>
-                </label>
-            </div>
-            <p>Ziyaretçi davranışlarını anlamamıza ve site performansını iyileştirmemize yardımcı olan çerezlerdir (Google Analytics).</p>
-        </div>
-
-        <div class="cookie-category">
-            <div class="cookie-category-header">
-                <h3><i class="fas fa-bullhorn"></i> Pazarlama Çerezleri</h3>
-                <label class="cookie-toggle">
-                    <input type="checkbox" id="marketing-cookies" onchange="updateCookiePreferences()">
-                    <span class="cookie-toggle-slider"></span>
-                </label>
-            </div>
-            <p>Hedefli reklamlar göstermek ve reklam kampanyalarının etkinliğini ölçmek için kullanılan çerezlerdir (Google Ads).</p>
-        </div>
-
-        <div class="cookie-modal-footer">
-            <button class="cookie-btn cookie-btn-reject" onclick="saveAndClose()">
-                <i class="fas fa-save"></i> Kaydet ve Kapat
-            </button>
-            <button class="cookie-btn cookie-btn-accept" onclick="acceptAllFromModal()">
-                <i class="fas fa-check-double"></i> Tümünü Kabul Et
-            </button>
-        </div>
-    </div>
-</div>
-
-<script>
-// Çerez Consent Yönetimi
-(function() {
-    'use strict';
-
-    // Çerez banner'ını göster
-    function showCookieBanner() {
-        const banner = document.getElementById('cookie-consent-banner');
-        if (banner) {
-            banner.style.display = 'block';
+    <script>
+    // Çerez Consent Yönetimi
+    (function() {
+        'use strict';
+        function showCookieBanner() {
+            const banner = document.getElementById('cookie-consent-banner');
+            if (banner) banner.style.display = 'block';
         }
-    }
-
-    // Çerez banner'ını gizle
-    function hideCookieBanner() {
-        const banner = document.getElementById('cookie-consent-banner');
-        if (banner) {
-            banner.style.display = 'none';
+        function hideCookieBanner() {
+            const banner = document.getElementById('cookie-consent-banner');
+            if (banner) banner.style.display = 'none';
         }
-    }
-
-    // Çerez tercihini kaydet
-    function setCookieConsent(name, value, days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
-    }
-
-    // Çerez tercihini oku
-    function getCookieConsent(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for(let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        function setCookieConsent(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + date.toUTCString() + ";path=/;SameSite=Lax";
         }
-        return null;
-    }
-
-    // Tüm çerezleri kabul et
-    window.acceptAllCookies = function() {
-        setCookieConsent('cookie_consent', 'all', 365);
-        setCookieConsent('analytics_consent', 'true', 365);
-        setCookieConsent('marketing_consent', 'true', 365);
-        
-        // Google Analytics'i aktif et
-        enableGoogleAnalytics();
-        enableGoogleAds();
-        
-        hideCookieBanner();
-    };
-
-    // Çerezleri reddet
-    window.rejectCookies = function() {
-        setCookieConsent('cookie_consent', 'necessary', 365);
-        setCookieConsent('analytics_consent', 'false', 365);
-        setCookieConsent('marketing_consent', 'false', 365);
-        
-        hideCookieBanner();
-    };
-
-    // Çerez ayarlarını aç
-    window.openCookieSettings = function() {
-        const modal = document.getElementById('cookie-settings-modal');
-        if (modal) {
-            modal.style.display = 'block';
-            
-            // Mevcut tercihleri yükle
-            const analyticsConsent = getCookieConsent('analytics_consent');
-            const marketingConsent = getCookieConsent('marketing_consent');
-            
-            document.getElementById('analytics-cookies').checked = analyticsConsent === 'true';
-            document.getElementById('marketing-cookies').checked = marketingConsent === 'true';
-        }
-    };
-
-    // Çerez ayarlarını kapat
-    window.closeCookieSettings = function() {
-        const modal = document.getElementById('cookie-settings-modal');
-        if (modal) {
-            modal.style.display = 'none';
-        }
-    };
-
-    // Modal'dan tümünü kabul et
-    window.acceptAllFromModal = function() {
-        document.getElementById('analytics-cookies').checked = true;
-        document.getElementById('marketing-cookies').checked = true;
-        saveAndClose();
-    };
-
-    // Tercihleri kaydet ve kapat
-    window.saveAndClose = function() {
-        const analyticsChecked = document.getElementById('analytics-cookies').checked;
-        const marketingChecked = document.getElementById('marketing-cookies').checked;
-        
-        setCookieConsent('cookie_consent', 'custom', 365);
-        setCookieConsent('analytics_consent', analyticsChecked ? 'true' : 'false', 365);
-        setCookieConsent('marketing_consent', marketingChecked ? 'true' : 'false', 365);
-        
-        if (analyticsChecked) {
-            enableGoogleAnalytics();
-        }
-        
-        if (marketingChecked) {
-            enableGoogleAds();
-        }
-        
-        closeCookieSettings();
-        hideCookieBanner();
-    };
-
-    // Google Analytics'i etkinleştir
-    function enableGoogleAnalytics() {
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
-            });
-        }
-    }
-
-    // Google Ads'i etkinleştir
-    function enableGoogleAds() {
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted'
-            });
-        }
-    }
-
-    // Sayfa yüklendiğinde çalış
-    window.addEventListener('DOMContentLoaded', function() {
-        const consent = getCookieConsent('cookie_consent');
-        
-        if (!consent) {
-            // Çerez tercihi yok, banner'ı göster
-            setTimeout(showCookieBanner, 1000);
-        } else {
-            // Mevcut tercihlere göre çerezleri aktif et
-            const analyticsConsent = getCookieConsent('analytics_consent');
-            const marketingConsent = getCookieConsent('marketing_consent');
-            
-            if (analyticsConsent === 'true') {
-                enableGoogleAnalytics();
+        function getCookieConsent(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
             }
-            
-            if (marketingConsent === 'true') {
-                enableGoogleAds();
-            }
+            return null;
         }
-    });
-
-    // Modal dışına tıklanınca kapat
-    window.addEventListener('click', function(event) {
-        const modal = document.getElementById('cookie-settings-modal');
-        if (event.target === modal) {
+        window.acceptAllCookies = function() {
+            setCookieConsent('cookie_consent', 'all', 365);
+            setCookieConsent('analytics_consent', 'true', 365);
+            setCookieConsent('marketing_consent', 'true', 365);
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted' });
+            }
+            hideCookieBanner();
+        };
+        window.rejectCookies = function() {
+            setCookieConsent('cookie_consent', 'necessary', 365);
+            setCookieConsent('analytics_consent', 'false', 365);
+            setCookieConsent('marketing_consent', 'false', 365);
+            hideCookieBanner();
+        };
+        window.openCookieSettings = function() {
+            const modal = document.getElementById('cookie-settings-modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.getElementById('analytics-cookies').checked = getCookieConsent('analytics_consent') === 'true';
+                document.getElementById('marketing-cookies').checked = getCookieConsent('marketing_consent') === 'true';
+            }
+        };
+        window.closeCookieSettings = function() {
+            const modal = document.getElementById('cookie-settings-modal');
+            if (modal) modal.style.display = 'none';
+        };
+        window.acceptAllFromModal = function() {
+            document.getElementById('analytics-cookies').checked = true;
+            document.getElementById('marketing-cookies').checked = true;
+            saveAndClose();
+        };
+        window.saveAndClose = function() {
+            const analyticsChecked = document.getElementById('analytics-cookies').checked;
+            const marketingChecked = document.getElementById('marketing-cookies').checked;
+            setCookieConsent('cookie_consent', 'custom', 365);
+            setCookieConsent('analytics_consent', analyticsChecked, 365);
+            setCookieConsent('marketing_consent', marketingChecked, 365);
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', {
+                    'analytics_storage': analyticsChecked ? 'granted' : 'denied',
+                    'ad_storage': marketingChecked ? 'granted' : 'denied',
+                    'ad_user_data': marketingChecked ? 'granted' : 'denied',
+                    'ad_personalization': marketingChecked ? 'granted' : 'denied'
+                });
+            }
             closeCookieSettings();
-        }
-    });
-})();
+            hideCookieBanner();
+        };
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookieConsent('cookie_consent');
+            if (!consent) {
+                setTimeout(showCookieBanner, 1000);
+            } else {
+                if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': getCookieConsent('analytics_consent') === 'true' ? 'granted' : 'denied',
+                        'ad_storage': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied',
+                        'ad_user_data': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied',
+                        'ad_personalization': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied'
+                    });
+                }
+            }
+        });
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('cookie-settings-modal');
+            if (event.target === modal) closeCookieSettings();
+        });
+    })();
     </script>
 </body>
 </html>
+
