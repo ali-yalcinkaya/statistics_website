@@ -6,11 +6,14 @@
     <title>Blog - İstatistik Danışmanlık</title>
     <meta name="description" content="Akademik istatistik, veri analizi ve SPSS üzerine makaleler, ipuçları ve kaynaklar.">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Merkezi Stil Dosyası -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Merkezi Stil ve Font Awesome -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -46,45 +49,20 @@
         <!-- Blog Yazıları Alanı -->
         <section class="blog-section">
             <div class="container">
-                <div class="blog-grid">
-                    <!-- Örnek Blog Yazısı 1 -->
-                    <article class="blog-post-card">
-                        <img src="https://placehold.co/600x400/667eea/ffffff?text=İstatistik" alt="Doğru istatistiksel test seçimi" class="post-image">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date"><i class="far fa-calendar"></i> 15 Ekim 2025</span>
-                            </div>
-                            <h2 class="post-title">Teziniz İçin Doğru İstatistiksel Testi Nasıl Seçersiniz?</h2>
-                            <p class="post-excerpt">Araştırma sorunuza ve veri tipinize en uygun istatistiksel testi seçmek, sonuçlarınızın güvenilirliği için kritiktir. Bu yazıda temel test seçim adımlarını inceliyoruz...</p>
-                            <a href="#" class="read-more-btn">Devamını Oku &rarr;</a>
-                        </div>
-                    </article>
+                <!-- Arama ve Filtreleme Kontrolleri -->
+                <div class="blog-controls">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Yazılarda ara...">
+                    </div>
+                    <div id="category-filters" class="category-filters">
+                        <!-- Kategori butonları buraya JavaScript ile eklenecek -->
+                    </div>
+                </div>
 
-                    <!-- Örnek Blog Yazısı 2 -->
-                    <article class="blog-post-card">
-                        <img src="https://placehold.co/600x400/764ba2/ffffff?text=SPSS" alt="SPSS Veri Temizliği" class="post-image">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date"><i class="far fa-calendar"></i> 01 Ekim 2025</span>
-                            </div>
-                            <h2 class="post-title">SPSS'te Veri Temizliği: En Sık Yapılan 5 Hata</h2>
-                            <p class="post-excerpt">Analize başlamadan önce verilerinizi doğru bir şekilde hazırlamak, yanıltıcı sonuçlardan kaçınmanın ilk adımıdır. İşte en sık yapılan veri temizliği hataları ve çözümleri...</p>
-                            <a href="#" class="read-more-btn">Devamını Oku &rarr;</a>
-                        </div>
-                    </article>
-                    
-                     <!-- Örnek Blog Yazısı 3 -->
-                    <article class="blog-post-card">
-                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=R+Programlama" alt="R Programlama ile Veri Görselleştirme" class="post-image">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date"><i class="far fa-calendar"></i> 25 Eylül 2025</span>
-                            </div>
-                            <h2 class="post-title">R ile Etkileyici Veri Görselleştirme Teknikleri</h2>
-                            <p class="post-excerpt">ggplot2 paketi kullanarak akademik yayın kalitesinde grafikler oluşturmanın temelleri. Verilerinizi hikayeye dönüştürün.</p>
-                            <a href="#" class="read-more-btn">Devamını Oku &rarr;</a>
-                        </div>
-                    </article>
+                <!-- Blog yazıları buraya JavaScript ile otomatik olarak eklenecek -->
+                <div id="blog-grid" class="blog-grid">
+                    <p>Yazılar yükleniyor...</p>
                 </div>
             </div>
         </section>
@@ -103,7 +81,6 @@
                         <a href="mailto:info@istatistik-danismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-
                 <div class="footer-section">
                     <h3>Hizmetler</h3>
                     <ul>
@@ -114,7 +91,6 @@
                         <li><a href="index.html#hizmetler">Biyoistatistik</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h3>İletişim</h3>
                     <div class="contact-info-item">
@@ -127,7 +103,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 İstatistik Danışmanlık. Tüm hakları saklıdır.</p>
                 <div class="footer-legal-links">
@@ -139,7 +114,7 @@
         </div>
     </footer>
 
-    <!-- Çerez Banner HTML -->
+    <!-- Çerez Banner ve Modal HTML -->
     <div id="cookie-consent-banner">
         <div class="cookie-consent-container">
             <div class="cookie-consent-text">
@@ -159,8 +134,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Çerez Ayarları Modal -->
     <div id="cookie-settings-modal">
         <div class="cookie-modal-content">
             <div class="cookie-modal-header">
@@ -169,7 +142,6 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-
             <div class="cookie-category">
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-shield-alt"></i> Zorunlu Çerezler</h3>
@@ -180,29 +152,26 @@
                 </div>
                 <p>Web sitesinin temel işlevleri için gerekli çerezlerdir. Bu çerezler devre dışı bırakılamaz.</p>
             </div>
-
             <div class="cookie-category">
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-chart-line"></i> Analitik Çerezler</h3>
                     <label class="cookie-toggle">
-                        <input type="checkbox" id="analytics-cookies" onchange="updateCookiePreferences()">
+                        <input type="checkbox" id="analytics-cookies">
                         <span class="cookie-toggle-slider"></span>
                     </label>
                 </div>
                 <p>Ziyaretçi davranışlarını anlamamıza ve site performansını iyileştirmemize yardımcı olan çerezlerdir (Google Analytics).</p>
             </div>
-
             <div class="cookie-category">
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-bullhorn"></i> Pazarlama Çerezleri</h3>
                     <label class="cookie-toggle">
-                        <input type="checkbox" id="marketing-cookies" onchange="updateCookiePreferences()">
+                        <input type="checkbox" id="marketing-cookies">
                         <span class="cookie-toggle-slider"></span>
                     </label>
                 </div>
                 <p>Hedefli reklamlar göstermek ve reklam kampanyalarının etkinliğini ölçmek için kullanılan çerezlerdir (Google Ads).</p>
             </div>
-
             <div class="cookie-modal-footer">
                 <button class="cookie-btn cookie-btn-reject" onclick="saveAndClose()">
                     <i class="fas fa-save"></i> Kaydet ve Kapat
@@ -215,136 +184,79 @@
     </div>
 
     <!-- Scriptler -->
+    <script src="blog-posts.js"></script>
     <script>
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-times');
-            });
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- BLOG OTOMASYON, ARAMA VE FİLTRELEME SCRIPT'İ ---
+            const blogGrid = document.getElementById('blog-grid');
+            const searchInput = document.getElementById('search-input');
+            const categoryFiltersContainer = document.getElementById('category-filters');
+            const allPosts = (typeof blogPosts !== 'undefined') ? blogPosts : [];
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        const icon = mobileMenuToggle.querySelector('i');
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-times');
-                    }
+            const renderPosts = (postsToRender) => {
+                blogGrid.innerHTML = '';
+                if (postsToRender.length === 0) {
+                    blogGrid.innerHTML = '<p style="text-align: center; color: var(--gray);">Arama kriterlerinize uygun yazı bulunamadı.</p>';
+                    return;
                 }
-            });
-        });
-    </script>
-    <script>
-    // Çerez Consent Yönetimi
-    (function() {
-        'use strict';
-        function showCookieBanner() {
-            const banner = document.getElementById('cookie-consent-banner');
-            if (banner) banner.style.display = 'block';
-        }
-        function hideCookieBanner() {
-            const banner = document.getElementById('cookie-consent-banner');
-            if (banner) banner.style.display = 'none';
-        }
-        function setCookieConsent(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + value + ";expires=" + date.toUTCString() + ";path=/;SameSite=Lax";
-        }
-        function getCookieConsent(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        window.acceptAllCookies = function() {
-            setCookieConsent('cookie_consent', 'all', 365);
-            setCookieConsent('analytics_consent', 'true', 365);
-            setCookieConsent('marketing_consent', 'true', 365);
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted' });
-            }
-            hideCookieBanner();
-        };
-        window.rejectCookies = function() {
-            setCookieConsent('cookie_consent', 'necessary', 365);
-            setCookieConsent('analytics_consent', 'false', 365);
-            setCookieConsent('marketing_consent', 'false', 365);
-            hideCookieBanner();
-        };
-        window.openCookieSettings = function() {
-            const modal = document.getElementById('cookie-settings-modal');
-            if (modal) {
-                modal.style.display = 'block';
-                document.getElementById('analytics-cookies').checked = getCookieConsent('analytics_consent') === 'true';
-                document.getElementById('marketing-cookies').checked = getCookieConsent('marketing_consent') === 'true';
-            }
-        };
-        window.closeCookieSettings = function() {
-            const modal = document.getElementById('cookie-settings-modal');
-            if (modal) modal.style.display = 'none';
-        };
-        window.acceptAllFromModal = function() {
-            document.getElementById('analytics-cookies').checked = true;
-            document.getElementById('marketing-cookies').checked = true;
-            saveAndClose();
-        };
-        window.saveAndClose = function() {
-            const analyticsChecked = document.getElementById('analytics-cookies').checked;
-            const marketingChecked = document.getElementById('marketing-cookies').checked;
-            setCookieConsent('cookie_consent', 'custom', 365);
-            setCookieConsent('analytics_consent', analyticsChecked, 365);
-            setCookieConsent('marketing_consent', marketingChecked, 365);
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': analyticsChecked ? 'granted' : 'denied',
-                    'ad_storage': marketingChecked ? 'granted' : 'denied',
-                    'ad_user_data': marketingChecked ? 'granted' : 'denied',
-                    'ad_personalization': marketingChecked ? 'granted' : 'denied'
+                const monthMap = { 'Ocak': 1, 'Şubat': 2, 'Mart': 3, 'Nisan': 4, 'Mayıs': 5, 'Haziran': 6, 'Temmuz': 7, 'Ağustos': 8, 'Eylül': 9, 'Ekim': 10, 'Kasım': 11, 'Aralık': 12 };
+                const sortedPosts = [...postsToRender].sort((a, b) => {
+                    const partsA = a.date.split(' '), partsB = b.date.split(' ');
+                    return new Date(partsB[2], monthMap[partsB[1]] - 1, partsB[0]) - new Date(partsA[2], monthMap[partsA[1]] - 1, partsA[0]);
                 });
-            }
-            closeCookieSettings();
-            hideCookieBanner();
-        };
-        window.addEventListener('DOMContentLoaded', function() {
-            const consent = getCookieConsent('cookie_consent');
-            if (!consent) {
-                setTimeout(showCookieBanner, 1000);
-            } else {
-                if (typeof gtag !== 'undefined') {
-                    gtag('consent', 'update', {
-                        'analytics_storage': getCookieConsent('analytics_consent') === 'true' ? 'granted' : 'denied',
-                        'ad_storage': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied',
-                        'ad_user_data': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied',
-                        'ad_personalization': getCookieConsent('marketing_consent') === 'true' ? 'granted' : 'denied'
-                    });
+                sortedPosts.forEach(post => {
+                    const tagsHTML = post.tags ? post.tags.map(tag => `<span class="post-tag">${tag}</span>`).join('') : '';
+                    const postCardHTML = `
+                        <article class="blog-post-card">
+                            <a href="${post.url}" class="post-image-link"><img src="${post.image}" alt="${post.alt}" class="post-image"></a>
+                            <div class="post-content">
+                                <div class="post-meta"><span class="post-date"><i class="far fa-calendar"></i> ${post.date}</span></div>
+                                <h2 class="post-title"><a href="${post.url}">${post.title}</a></h2>
+                                <p class="post-excerpt">${post.excerpt}</p>
+                                <div class="post-tags">${tagsHTML}</div>
+                                <a href="${post.url}" class="read-more-btn" style="display: block; text-align: right; margin-top: auto; padding-top: 1rem;">Devamını Oku &rarr;</a>
+                            </div>
+                        </article>`;
+                    blogGrid.innerHTML += postCardHTML;
+                });
+            };
+
+            const createCategoryFilters = () => {
+                if (!allPosts.length) return;
+                const allTags = [...new Set(allPosts.flatMap(post => post.tags || []))].sort();
+                let buttonsHTML = '<button class="filter-btn active" data-category="all">Tümü</button>';
+                allTags.forEach(tag => { buttonsHTML += `<button class="filter-btn" data-category="${tag}">${tag}</button>`; });
+                categoryFiltersContainer.innerHTML = buttonsHTML;
+                document.querySelectorAll('.filter-btn').forEach(button => button.addEventListener('click', handleFilterClick));
+            };
+
+            const filterAndRenderPosts = () => {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+                let filteredPosts = allPosts;
+                if (activeCategory !== 'all') {
+                    filteredPosts = filteredPosts.filter(post => post.tags && post.tags.includes(activeCategory));
                 }
-            }
+                if (searchTerm) {
+                    filteredPosts = filteredPosts.filter(post => post.title.toLowerCase().includes(searchTerm) || post.excerpt.toLowerCase().includes(searchTerm) || (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm))));
+                }
+                renderPosts(filteredPosts);
+            };
+            
+            const handleFilterClick = (event) => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                event.target.classList.add('active');
+                searchInput.value = ''; // Kategoriye tıklanınca aramayı temizle
+                filterAndRenderPosts();
+            };
+
+            searchInput.addEventListener('input', filterAndRenderPosts);
+            createCategoryFilters();
+            renderPosts(allPosts);
+            
+            // --- GENEL SİTE SCRIPT'LERİ (MOBİL MENÜ, ÇEREZ VS.) ---
+            const mobileMenuToggle=document.querySelector(".mobile-menu-toggle"),navLinks=document.querySelector(".nav-links");mobileMenuToggle&&mobileMenuToggle.addEventListener("click",function(){navLinks.classList.toggle("active");const e=this.querySelector("i");e.classList.toggle("fa-bars"),e.classList.toggle("fa-times")}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();let o=window.location.pathname.split("/").pop();""===o&&(o="index.html"),"index.html"===o?document.querySelector(this.getAttribute("href"))?.scrollIntoView({behavior:"smooth",block:"start"}):window.location.href="index.html"+this.getAttribute("href")})});function showCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="block")}function hideCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="none")}function setCookieConsent(e,t,o){const n=new Date;n.setTime(n.getTime()+24*o*60*60*1e3),document.cookie=e+"="+t+";expires="+n.toUTCString()+";path=/;SameSite=Lax"}function getCookieConsent(e){const t=e+"=";const o=document.cookie.split(";");for(let e=0;e<o.length;e++){let n=o[e];for(;" "===n.charAt(0);)n=n.substring(1,n.length);if(0===n.indexOf(t))return n.substring(t.length,n.length)}return null}window.acceptAllCookies=function(){setCookieConsent("cookie_consent","all",365),setCookieConsent("analytics_consent","true",365),setCookieConsent("marketing_consent","true",365),"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted"}),hideCookieBanner()},window.rejectCookies=function(){setCookieConsent("cookie_consent","necessary",365),setCookieConsent("analytics_consent","false",365),setCookieConsent("marketing_consent","false",365),hideCookieBanner()},window.openCookieSettings=function(){const e=document.getElementById("cookie-settings-modal");e&&(e.style.display="block",document.getElementById("analytics-cookies").checked="true"===getCookieConsent("analytics_consent"),document.getElementById("marketing-cookies").checked="true"===getCookieConsent("marketing_consent"))},window.closeCookieSettings=function(){const e=document.getElementById("cookie-settings-modal");e&&(e.style.display="none")},window.acceptAllFromModal=function(){document.getElementById("analytics-cookies").checked=!0,document.getElementById("marketing-cookies").checked=!0,saveAndClose()},window.saveAndClose=function(){const e=document.getElementById("analytics-cookies").checked,t=document.getElementById("marketing-cookies").checked;setCookieConsent("cookie_consent","custom",365),setCookieConsent("analytics_consent",e,365),setCookieConsent("marketing_consent",t,365),"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:e?"granted":"denied",ad_storage:t?"granted":"denied",ad_user_data:t?"granted":"denied",ad_personalization:t?"granted":"denied"}),closeCookieSettings(),hideCookieBanner()};const consent=getCookieConsent("cookie_consent");consent?"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"true"===getCookieConsent("analytics_consent")?"granted":"denied",ad_storage:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_user_data:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_personalization:"true"===getCookieConsent("marketing_consent")?"granted":"denied"}):setTimeout(showCookieBanner,1e3);window.addEventListener("click",function(e){const t=document.getElementById("cookie-settings-modal");e.target===t&&closeCookieSettings()});
         });
-        window.addEventListener('click', function(event) {
-            const modal = document.getElementById('cookie-settings-modal');
-            if (event.target === modal) closeCookieSettings();
-        });
-    })();
     </script>
 </body>
 </html>
