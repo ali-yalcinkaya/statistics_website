@@ -13,7 +13,6 @@ const blogPosts = [
         tags: ['SPSS', 'Veri Hazırlama']
     },
     
-    }
     // YENİ BİR YAZI EKLEDİĞİNİZDE, YUKARIDAKİ GİBİ BİR {} BLOĞUNU KOPYALAYIP
     // VİRGÜLLE AYIRARAK BURAYA EKLEYİN.
 ];
