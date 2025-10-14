@@ -188,68 +188,92 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- BLOG OTOMASYON, ARAMA VE FİLTRELEME SCRIPT'İ ---
+            // Değişkenleri tanımla
             const blogGrid = document.getElementById('blog-grid');
             const searchInput = document.getElementById('search-input');
             const categoryFiltersContainer = document.getElementById('category-filters');
             const allPosts = (typeof blogPosts !== 'undefined') ? blogPosts : [];
 
+            // Yazıları ekrana çizen fonksiyon
             const renderPosts = (postsToRender) => {
                 blogGrid.innerHTML = '';
                 if (postsToRender.length === 0) {
-                    blogGrid.innerHTML = '<p style="text-align: center; color: var(--gray);">Arama kriterlerinize uygun yazı bulunamadı.</p>';
+                    blogGrid.innerHTML = '<p style="text-align: center; color: var(--gray); grid-column: 1 / -1;">Arama kriterlerinize uygun yazı bulunamadı.</p>';
                     return;
                 }
                 const monthMap = { 'Ocak': 1, 'Şubat': 2, 'Mart': 3, 'Nisan': 4, 'Mayıs': 5, 'Haziran': 6, 'Temmuz': 7, 'Ağustos': 8, 'Eylül': 9, 'Ekim': 10, 'Kasım': 11, 'Aralık': 12 };
                 const sortedPosts = [...postsToRender].sort((a, b) => {
-                    const partsA = a.date.split(' '), partsB = b.date.split(' ');
-                    return new Date(partsB[2], monthMap[partsB[1]] - 1, partsB[0]) - new Date(partsA[2], monthMap[partsA[1]] - 1, partsA[0]);
+                    const partsA = a.date.split(' ');
+                    const partsB = b.date.split(' ');
+                    const dateA = new Date(partsA[2], monthMap[partsA[1]] - 1, partsA[0]);
+                    const dateB = new Date(partsB[2], monthMap[partsB[1]] - 1, partsB[0]);
+                    return dateB - dateA;
                 });
+
                 sortedPosts.forEach(post => {
                     const tagsHTML = post.tags ? post.tags.map(tag => `<span class="post-tag">${tag}</span>`).join('') : '';
-                    const postCardHTML = `
-                        <article class="blog-post-card">
-                            <a href="${post.url}" class="post-image-link"><img src="${post.image}" alt="${post.alt}" class="post-image"></a>
-                            <div class="post-content">
-                                <div class="post-meta"><span class="post-date"><i class="far fa-calendar"></i> ${post.date}</span></div>
-                                <h2 class="post-title"><a href="${post.url}">${post.title}</a></h2>
-                                <p class="post-excerpt">${post.excerpt}</p>
-                                <div class="post-tags">${tagsHTML}</div>
-                                <a href="${post.url}" class="read-more-btn" style="display: block; text-align: right; margin-top: auto; padding-top: 1rem;">Devamını Oku &rarr;</a>
-                            </div>
-                        </article>`;
-                    blogGrid.innerHTML += postCardHTML;
+                    const postCard = document.createElement('article');
+                    postCard.className = 'blog-post-card';
+                    postCard.innerHTML = `
+                        <a href="${post.url}" class="post-image-link"><img src="${post.image}" alt="${post.alt}" class="post-image"></a>
+                        <div class="post-content">
+                            <div class="post-meta"><span class="post-date"><i class="far fa-calendar"></i> ${post.date}</span></div>
+                            <h2 class="post-title"><a href="${post.url}">${post.title}</a></h2>
+                            <p class="post-excerpt">${post.excerpt}</p>
+                            <div class="post-tags">${tagsHTML}</div>
+                            <a href="${post.url}" class="read-more-btn" style="display: block; text-align: right; margin-top: auto; padding-top: 1rem;">Devamını Oku &rarr;</a>
+                        </div>`;
+                    blogGrid.appendChild(postCard);
                 });
             };
 
+            // Kategori filtre butonlarını oluşturan fonksiyon
             const createCategoryFilters = () => {
                 if (!allPosts.length) return;
-                const allTags = [...new Set(allPosts.flatMap(post => post.tags || []))].sort();
+                const allTags = [...new Set(allPosts.flatMap(post => post.tags || []))].sort((a, b) => a.localeCompare(b, 'tr'));
                 let buttonsHTML = '<button class="filter-btn active" data-category="all">Tümü</button>';
-                allTags.forEach(tag => { buttonsHTML += `<button class="filter-btn" data-category="${tag}">${tag}</button>`; });
+                allTags.forEach(tag => {
+                    buttonsHTML += `<button class="filter-btn" data-category="${tag}">${tag}</button>`;
+                });
                 categoryFiltersContainer.innerHTML = buttonsHTML;
-                document.querySelectorAll('.filter-btn').forEach(button => button.addEventListener('click', handleFilterClick));
+                categoryFiltersContainer.addEventListener('click', handleFilterClick);
             };
 
+            // Filtreleme ve arama işlemini yöneten ana fonksiyon
             const filterAndRenderPosts = () => {
                 const searchTerm = searchInput.value.toLowerCase().trim();
-                const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+                const activeCategoryButton = document.querySelector('.filter-btn.active');
+                if (!activeCategoryButton) return;
+                
+                const activeCategory = activeCategoryButton.dataset.category;
                 let filteredPosts = allPosts;
+
                 if (activeCategory !== 'all') {
                     filteredPosts = filteredPosts.filter(post => post.tags && post.tags.includes(activeCategory));
                 }
                 if (searchTerm) {
-                    filteredPosts = filteredPosts.filter(post => post.title.toLowerCase().includes(searchTerm) || post.excerpt.toLowerCase().includes(searchTerm) || (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm))));
+                    filteredPosts = filteredPosts.filter(post => 
+                        post.title.toLowerCase().includes(searchTerm) || 
+                        post.excerpt.toLowerCase().includes(searchTerm) || 
+                        (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+                    );
                 }
                 renderPosts(filteredPosts);
             };
             
+            // Kategori butonuna tıklama olayını yöneten fonksiyon
             const handleFilterClick = (event) => {
-                document.querySelector('.filter-btn.active').classList.remove('active');
+                if (event.target.tagName !== 'BUTTON') return;
+                const currentActive = categoryFiltersContainer.querySelector('.filter-btn.active');
+                if (currentActive) {
+                    currentActive.classList.remove('active');
+                }
                 event.target.classList.add('active');
                 searchInput.value = ''; // Kategoriye tıklanınca aramayı temizle
                 filterAndRenderPosts();
             };
-
+            
+            // Olay dinleyicilerini ve ilk çalıştırmayı başlat
             searchInput.addEventListener('input', filterAndRenderPosts);
             createCategoryFilters();
             renderPosts(allPosts);
