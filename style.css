@@ -216,6 +216,17 @@ footer {
 .form-message.success { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
 .form-message.error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
 
+/* Honeypot field - görünmez ama DOM'da var (botları yakalar) */
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
 /* -------------------------------------------------------------------------- */
 /* TOOLS SECTION (index.html'e özel)                                          */
 /* -------------------------------------------------------------------------- */
