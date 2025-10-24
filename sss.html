@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular (SSS) - İstatistik Danışmanlık</title>
+    <meta name="description" content="İstatistik danışmanlığı hizmetlerimiz hakkında sıkça sorulan sorular ve cevapları. Fiyatlandırma, süreç, SPSS analizi ve daha fazlası.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://istatistik-danismanlik.com/sss.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://istatistik-danismanlik.com/sss.html">
+    <meta property="og:title" content="Sıkça Sorulan Sorular - İstatistik Danışmanlık">
+    <meta property="og:description" content="İstatistik danışmanlığı hizmetlerimiz hakkında sıkça sorulan sorular ve cevapları.">
+    <meta property="og:image" content="https://istatistik-danismanlik.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://istatistik-danismanlik.com/sss.html">
+    <meta property="twitter:title" content="Sıkça Sorulan Sorular - İstatistik Danışmanlık">
+    <meta property="twitter:description" content="İstatistik danışmanlığı hizmetlerimiz hakkında sıkça sorulan sorular ve cevapları.">
+    <meta property="twitter:image" content="https://istatistik-danismanlik.com/og-image.jpg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-90RQCKY6W9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-90RQCKY6W9');
+      gtag('config', 'AW-17613183233');
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .faq-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .faq-header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .category-btn {
+            padding: 0.7rem 1.5rem;
+            background: var(--light);
+            border: 2px solid transparent;
+            border-radius: 25px;
+            color: var(--dark);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        .faq-section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary);
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(65, 105, 225, 0.15);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-question h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+        .faq-question i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        .faq-answer-content ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .faq-answer-content li {
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer-content strong {
+            color: var(--dark);
+        }
+        .faq-cta {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .faq-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .faq-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .faq-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .faq-cta-btn {
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        .faq-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .faq-header h1 {
+                font-size: 2rem;
+            }
+            .faq-section-title {
+                font-size: 1.5rem;
+            }
+            .faq-cta {
+                padding: 2rem 1.5rem;
+            }
+            .faq-cta h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-chart-line"></i>
+                İstatistik Danışmanlık
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="index.html#hizmetler">Hizmetler</a></li>
+                <li><a href="index.html#surec">Süreç</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="index.html#teklif-al" class="nav-cta">Ücretsiz Teklif Al</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sss.html">SSS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="faq-container container">
+            <div class="faq-header">
+                <h1><i class="fas fa-question-circle"></i> Sıkça Sorulan Sorular</h1>
+                <p>İstatistik danışmanlığı hizmetlerimiz hakkında merak ettikleriniz</p>
+            </div>
+
+            <!-- Genel Sorular -->
+            <div class="faq-section" id="genel">
+                <h2 class="faq-section-title"><i class="fas fa-info-circle"></i> Genel Sorular</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hangi alanlarda istatistiksel danışmanlık hizmeti veriyorsunuz?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Geniş bir yelpazede hizmet sunuyoruz:</p>
+                            <ul>
+                                <li><strong>Tez İstatistik:</strong> Yüksek lisans ve doktora tezleri</li>
+                                <li><strong>Nicel Veri Analizi:</strong> SPSS, R, Python, AMOS, Jamovi</li>
+                                <li><strong>Nitel Veri Analizi:</strong> İçerik analizi, tematik analiz</li>
+                                <li><strong>Biyoistatistik:</strong> Klinik çalışmalar, sağlık bilimleri</li>
+                                <li><strong>İleri Düzey Analiz:</strong> YEM, makine öğrenmesi, zaman serisi</li>
+                            </ul>
+                            <p>Psikoloji, eğitim, sağlık, spor, sosyal bilimler ve mühendislik alanlarında uzmanız.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Sadece analiz mi yapıyorsunuz, yoksa yorumlama da dahil mi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Kapsamlı bir hizmet sunuyoruz:</p>
+                            <ul>
+                                <li>İstatistiksel analizlerin yapılması</li>
+                                <li>Sonuçların akademik dilde yorumlanması</li>
+                                <li>Tabloların ve grafiklerin hazırlanması</li>
+                                <li>APA formatında raporlama</li>
+                                <li>Bulgular bölümünün yazılması (isteğe bağlı)</li>
+                                <li>Sonuçların tez/makale danışmanınıza sunumu</li>
+                            </ul>
+                            <p>Sadece sayıları vermekle kalmaz, anlamlandırmasına yardımcı oluruz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hangi istatistik programlarını kullanıyorsunuz?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Profesyonel düzeyde kullandığımız programlar:</p>
+                            <ul>
+                                <li><strong>SPSS:</strong> En yaygın kullanılan, tez jürilerinin tercihi</li>
+                                <li><strong>R:</strong> İleri düzey analizler, grafik ve raporlama</li>
+                                <li><strong>Python:</strong> Makine öğrenmesi, büyük veri analizi</li>
+                                <li><strong>AMOS:</strong> Yapısal Eşitlik Modellemesi (YEM)</li>
+                                <li><strong>Jamovi:</strong> Kullanıcı dostu, modern arayüz</li>
+                                <li><strong>Stata:</strong> Ekonometri ve panel veri analizi</li>
+                            </ul>
+                            <p>İhtiyacınıza göre en uygun programı seçiyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Verilerim güvende mi? Gizlilik politikanız nedir?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Verilerinizin güvenliği bizim için önceliktir:</p>
+                            <ul>
+                                <li>Tüm veriler şifreli olarak saklanır</li>
+                                <li>Üçüncü kişilerle asla paylaşılmaz</li>
+                                <li>Proje tamamlandıktan sonra veriler silinir (isteğe bağlı)</li>
+                                <li>Gizlilik sözleşmesi (NDA) imzalanabilir</li>
+                                <li>KVKK ve GDPR uyumlu çalışırız</li>
+                            </ul>
+                            <p>Detaylı bilgi için <a href="gizlilik-politikasi.html" style="color: var(--primary);">Gizlilik Politikamızı</a> inceleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>İngilizce makale/tez için de destek veriyor musunuz?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Evet, İngilizce akademik çalışmalar için de hizmet veriyoruz:</p>
+                            <ul>
+                                <li>İngilizce raporlama (APA 7th edition)</li>
+                                <li>Uluslararası dergi standartlarında tablo/grafik</li>
+                                <li>SPSS output'ları İngilizce</li>
+                                <li>Bulgular bölümü akademik İngilizce ile</li>
+                            </ul>
+                            <p>Q1/Q2 dergilerde yayınlanmış çalışmalarımız bulunmaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fiyatlandırma ve Ödeme -->
+            <div class="faq-section" id="fiyatlandirma">
+                <h2 class="faq-section-title"><i class="fas fa-money-bill-wave"></i> Fiyatlandırma ve Ödeme</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hizmet ücretleriniz ne kadardır?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Fiyatlandırma aşağıdaki faktörlere göre belirlenir:</p>
+                            <ul>
+                                <li><strong>Analiz karmaşıklığı:</strong> Basit tanımlayıcı istatistikler mi, yoksa YEM gibi ileri analizler mi?</li>
+                                <li><strong>Veri boyutu:</strong> Örneklem sayısı ve değişken sayısı</li>
+                                <li><strong>Kullanılacak yöntemler:</strong> Tek bir test mi, yoksa çoklu analiz mi?</li>
+                                <li><strong>Teslim süresi:</strong> Acil işler için ek ücret uygulanır</li>
+                                <li><strong>Ek hizmetler:</strong> Yorumlama, bulgular yazımı, sunum hazırlama</li>
+                            </ul>
+                            <p><strong>Ücretsiz ön görüşme yapıyoruz.</strong> Projenizi inceledikten sonra net fiyat teklifi sunuyoruz.</p>
+                            <p><a href="index.html#teklif-al" style="color: var(--primary); font-weight: 600;">Ücretsiz teklif almak için tıklayın →</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ödeme nasıl yapılır? Peşin mi, taksitli mi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Standart ödeme şeklimiz:</p>
+                            <ul>
+                                <li><strong>%50 Peşin:</strong> Sözleşme imzalandıktan sonra</li>
+                                <li><strong>%50 Teslimde:</strong> Çalışma tamamlanıp size sunulmadan önce</li>
+                            </ul>
+                            <p><strong>Ödeme yöntemleri:</strong></p>
+                            <ul>
+                                <li>Banka havalesi / EFT</li>
+                                <li>Faturalı çalışma (kurumsal müşteriler için)</li>
+                            </ul>
+                            <p><strong>Not:</strong> Öğrenciler için özel ödeme planları oluşturulabilir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>İptal ve iade politikanız nedir?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Mesafeli Satış Sözleşmeleri Yönetmeliği kapsamında:</p>
+                            <ul>
+                                <li><strong>Çalışma başlamadan:</strong> %100 iade</li>
+                                <li><strong>Çalışma başladıktan sonra:</strong> Peşin ödeme iade edilmez (yapılan işe göre kısmi iade değerlendirilebilir)</li>
+                                <li><strong>14 gün cayma hakkı:</strong> Yasal süre içinde cayma hakkınız vardır</li>
+                                <li><strong>Sözleşmeye uygun olmayan teslimat:</strong> Ücretsiz düzeltme veya tam iade</li>
+                            </ul>
+                            <p>Detaylar için <a href="kullanim-kosullari.html" style="color: var(--primary);">Kullanım Koşullarımızı</a> inceleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Fatura kesiliyor mu?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Evet, tüm hizmetlerimiz için fatura düzenlenmektedir.</p>
+                            <ul>
+                                <li>Bireysel fatura (TC kimlik no ile)</li>
+                                <li>Kurumsal fatura (şirket bilgileri ile)</li>
+                                <li>E-fatura sistemi mevcuttur</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Süreç ve Teslimat -->
+            <div class="faq-section" id="surec">
+                <h2 class="faq-section-title"><i class="fas fa-clipboard-list"></i> Süreç ve Teslimat</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Çalışma süreci nasıl ilerliyor?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>6 adımlı net sürecimiz:</p>
+                            <ol>
+                                <li><strong>İlk Görüşme:</strong> Ücretsiz ön değerlendirme, ihtiyaç analizi</li>
+                                <li><strong>Veri İnceleme:</strong> Verilerinizi inceliyoruz, analiz planı hazırlıyoruz</li>
+                                <li><strong>Teklif ve Sözleşme:</strong> Fiyat teklifi ve çalışma kapsamı belirleniyor</li>
+                                <li><strong>Veri Hazırlama:</strong> Veri temizleme, kodlama, eksik veri kontrolü</li>
+                                <li><strong>İstatistiksel Analiz:</strong> Belirlenen yöntemlerle analizler yapılıyor</li>
+                                <li><strong>Raporlama ve Teslim:</strong> Detaylı rapor, tablolar, yorumlar teslim ediliyor</li>
+                            </ol>
+                            <p>Her aşamada sizinle iletişim halinde oluyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Analizlerin tamamlanması ne kadar sürer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Süre, proje karmaşıklığına göre değişir:</p>
+                            <ul>
+                                <li><strong>Basit analizler:</strong> 3-5 iş günü (tanımlayıcı istatistikler, t-testi)</li>
+                                <li><strong>Orta düzey:</strong> 5-10 iş günü (ANOVA, regresyon, faktör analizi)</li>
+                                <li><strong>İleri düzey:</strong> 10-20 iş günü (YEM, zaman serisi, makine öğrenmesi)</li>
+                                <li><strong>Acil işler:</strong> 2-3 iş günü (ek ücret karşılığı)</li>
+                            </ul>
+                            <p>Net teslimat tarihi sözleşmede belirtilir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ne tür çıktılar alırım?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Kapsamlı bir teslimat paketi sunuyoruz:</p>
+                            <ul>
+                                <li><strong>Analiz Raporu (PDF/Word):</strong> Tüm bulgular, yorumlar, tablolar</li>
+                                <li><strong>SPSS/R/Python Çıktıları:</strong> Orijinal output dosyaları</li>
+                                <li><strong>Tablolar ve Grafikler:</strong> APA formatında, yüksek çözünürlüklü</li>
+                                <li><strong>Syntax/Script Dosyaları:</strong> Analiz kodları (tekrarlanabilirlik için)</li>
+                                <li><strong>Temizlenmiş Veri Seti:</strong> Analizde kullanılan final veri</li>
+                                <li><strong>Yorumlama Rehberi:</strong> Bulgularınızı nasıl yorumlayacağınız</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Revizyon hakkım var mı?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Evet, revizyon hakkınız bulunmaktadır:</p>
+                            <ul>
+                                <li><strong>1 kez ücretsiz revizyon</strong> (teslimden sonraki 30 gün içinde)</li>
+                                <li>Danışmanınızın isteği üzerine düzeltmeler</li>
+                                <li>Analiz yönteminde değişiklik (makul çerçevede)</li>
+                                <li>Ek tablo/grafik talepleri</li>
+                            </ul>
+                            <p><strong>Not:</strong> Tamamen yeni bir analiz talep edilmesi durumunda ek ücret uygulanır.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Teslim sonrası destek var mı?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Evet, teslim sonrası da yanınızdayız:</p>
+                            <ul>
+                                <li>E-posta ile soru-cevap desteği (30 gün)</li>
+                                <li>Bulgular konusunda danışmanlık</li>
+                                <li>Jüri/danışman sorularına hazırlık</li>
+                                <li>Ek açıklama ve yorumlama</li>
+                            </ul>
+                            <p>Hedefimiz tezinizi/makalenizi başarıyla tamamlamanız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teknik Sorular -->
+            <div class="faq-section" id="teknik">
+                <h2 class="faq-section-title"><i class="fas fa-laptop-code"></i> Teknik Sorular</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Verilerimi hangi formatlarda gönderebilirim?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Çeşitli dosya formatlarını kabul ediyoruz:</p>
+                            <ul>
+                                <li><strong>Excel:</strong> .xlsx, .xls (en yaygın)</li>
+                                <li><strong>SPSS:</strong> .sav</li>
+                                <li><strong>CSV:</strong> .csv (virgülle ayrılmış)</li>
+                                <li><strong>Google Sheets:</strong> Doğrudan link</li>
+                                <li><strong>Stata, R:</strong> .dta, .RData</li>
+                                <li><strong>Text:</strong> .txt, .dat</li>
+                            </ul>
+                            <p>Excel veya SPSS formatı en idealdir.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Verilerim düzensiz/ham, düzenlemeniz gerekiyor. Sorun olur mu?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Hiç sorun değil! Veri temizleme ve hazırlama hizmetimiz kapsamında:</p>
+                            <ul>
+                                <li>Ham verilerin düzenlenmesi</li>
+                                <li>Eksik verilerin tespit ve yönetimi</li>
+                                <li>Uç değerlerin (outlier) kontrolü</li>
+                                <li>Değişken kodlaması</li>
+                                <li>Ters madde dönüşümü</li>
+                                <li>Ölçek hesaplamaları</li>
+                            </ul>
+                            <p>Verileriniz her halde olsun, biz analize hazır hale getiririz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hangi istatistiksel testlerin uygun olduğunu nasıl anlarız?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Bu bizim uzmanlık alanımız! Uygun test seçimi için:</p>
+                            <ul>
+                                <li>Araştırma sorularınızı analiz ederiz</li>
+                                <li>Hipotezlerinizi inceleriz</li>
+                                <li>Veri tipini değerlendiririz (kategorik/sürekli)</li>
+                                <li>Örneklem büyüklüğünü kontrol ederiz</li>
+                                <li>Varsayımları test ederiz (normallik, varyans homojenliği)</li>
+                            </ul>
+                            <p>Size en uygun yöntemi önerip, gerekçelerini açıklarız.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Varsayımlar karşılanmazsa ne yapılır?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Varsayımlar ihlal edildiğinde alternatif çözümler üretiriz:</p>
+                            <ul>
+                                <li><strong>Normallik yoksa:</strong> Parametrik olmayan testler (Mann-Whitney, Kruskal-Wallis)</li>
+                                <li><strong>Varyans homojenliği yoksa:</strong> Welch testi, Brown-Forsythe</li>
+                                <li><strong>Çoklu bağlantı varsa:</strong> Ridge/Lasso regresyon</li>
+                                <li><strong>Uç değerler fazlaysa:</strong> Robust istatistikler</li>
+                            </ul>
+                            <p>Her durumda bilimsel olarak geçerli bir çözüm sunarız.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Örneklem büyüklüğü yeterli mi, nasıl anlarız?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>G*Power analizi ile örneklem yeterliliğini değerlendiririz:</p>
+                            <ul>
+                                <li>Kullanılacak teste göre minimum örneklem hesabı</li>
+                                <li>Etki büyüklüğü (effect size) hesaplaması</li>
+                                <li>İstatistiksel güç analizi (power analysis)</li>
+                                <li>Post-hoc güç analizi (veri toplandıysa)</li>
+                            </ul>
+                            <p>Örneklem yetersizse alternatif analiz yöntemleri önerebiliriz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etik ve Akademik -->
+            <div class="faq-section" id="etik">
+                <h2 class="faq-section-title"><i class="fas fa-balance-scale"></i> Etik ve Akademik Konular</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hizmetiniz etik kurul onayını gerektirir mi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Etik kurul onayı veri toplama aşamasında gereklidir, analiz için değil:</p>
+                            <ul>
+                                <li>Biz sadece <strong>istatistiksel analiz ve danışmanlık</strong> yapıyoruz</li>
+                                <li>Veri toplama, araştırma tasarımı size aittir</li>
+                                <li>Etik kurul onayı araştırmacının sorumluluğundadır</li>
+                            </ul>
+                            <p>Ancak etik kurul gerektiren projeler için doğru dokümantasyon konusunda yönlendirme yapabiliriz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Tezimi/makalemi sizin yazmanızı istesem olur mu?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Hayır.</strong> Akademik dürüstlük ilkelerimiz gereği:</p>
+                            <ul>
+                                <li>Tez/makale <strong>tamamen size ait</strong> olmalıdır</li>
+                                <li>Biz sadece <strong>istatistiksel analiz ve danışmanlık</strong> yapıyoruz</li>
+                                <li>"Bulgular" bölümü için taslak metin sunabiliriz (isteğe bağlı)</li>
+                                <li>Yorumlama ve rapor yazma konusunda <strong>rehberlik</strong> ederiz</li>
+                            </ul>
+                            <p>Amacımız size akademik başarınızda <strong>destek olmak</strong>, sizin yerinize yapmak değil.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Teşekkür/Acknowledgement bölümünde yer alsam mı?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Bu size kalmış bir tercihtir:</p>
+                            <ul>
+                                <li><strong>Evet derseniz:</strong> "İstatistiksel analizlerde danışmanlık hizmeti alınmıştır" şeklinde belirtebilirsiniz</li>
+                                <li><strong>Gizli tutmak isterseniz:</strong> Hiçbir yerde belirtmenize gerek yoktur</li>
+                            </ul>
+                            <p>Her iki durumda da hizmet kalitemiz aynıdır.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yaptığınız analizler bilimsel olarak geçerli mi? Jüri kabul eder mi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Kesinlikle! Analizlerimiz:</p>
+                            <ul>
+                                <li>Uluslararası standartlara uygun (APA, AMA)</li>
+                                <li>Literatürle destekleniyor</li>
+                                <li>Varsayımlar test ediliyor ve raporlanıyor</li>
+                                <li>Tekrarlanabilir (syntax/script sağlıyoruz)</li>
+                            </ul>
+                            <p><strong>Kanıt:</strong> 70+ tez, 50+ makale başarıyla tamamlandı. Q1 dergilerde yayınlarımız var.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="faq-cta">
+                <h2>Sorunuz Cevapsız mı Kaldı?</h2>
+                <p>Size yardımcı olmak için buradayız. Ücretsiz ön görüşme için iletişime geçin.</p>
+                <div class="faq-cta-buttons">
+                    <a href="index.html#teklif-al" class="faq-cta-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Ücretsiz Teklif Al
+                    </a>
+                    <a href="mailto:info@istatistik-danismanlik.com" class="faq-cta-btn">
+                        <i class="fas fa-envelope"></i>
+                        E-posta Gönder
+                    </a>
+                    <a href="tel:+905348674768" class="faq-cta-btn">
+                        <i class="fas fa-phone"></i>
+                        Hemen Ara
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>İstatistik Danışmanlık</h3>
+                    <p>Akademik araştırmalarınızda güvenilir istatistiksel analiz ve danışmanlık hizmeti sunuyoruz. Tez, makale ve projeleriniz için profesyonel destek.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ali-yalcinkaya" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/_aliyalcinkaya" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:info@istatistik-danismanlik.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="index.html#hizmetler">Tez İstatistik</a></li>
+                        <li><a href="index.html#hizmetler">SPSS Analizi</a></li>
+                        <li><a href="index.html#hizmetler">R Programlama</a></li>
+                        <li><a href="index.html#hizmetler">Python Analiz</a></li>
+                        <li><a href="index.html#hizmetler">Biyoistatistik</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@istatistik-danismanlik.com">info@istatistik-danismanlik.com</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+905348674768">+90 534 867 47 68</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 İstatistik Danışmanlık. Tüm hakları saklıdır.</p>
+                <div class="footer-legal-links">
+                    <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+                    <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+                    <a href="cerez-politikasi.html">Çerez Politikası</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-consent-banner">
+        <div class="cookie-consent-container">
+            <div class="cookie-consent-text">
+                <h3><i class="fas fa-cookie-bite"></i> Çerezleri Kullanıyoruz</h3>
+                <p>Web sitemizde size en iyi deneyimi sunabilmek için çerezleri kullanıyoruz. Detaylı bilgi için <a href="cerez-politikasi.html" target="_blank">Çerez Politikamızı</a> inceleyebilirsiniz.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">
+                    <i class="fas fa-check"></i> Tümünü Kabul Et
+                </button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">
+                    Reddet
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Cookie management
+        function showCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="block")}function hideCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="none")}function setCookieConsent(e,t,o){const n=new Date;n.setTime(n.getTime()+24*o*60*60*1e3),document.cookie=e+"="+t+";expires="+n.toUTCString()+";path=/;SameSite=Lax"}function getCookieConsent(e){const t=e+"=";const o=document.cookie.split(";");for(let e=0;e<o.length;e++){let n=o[e];for(;" "===n.charAt(0);)n=n.substring(1,n.length);if(0===n.indexOf(t))return n.substring(t.length,n.length)}return null}window.acceptAllCookies=function(){setCookieConsent("cookie_consent","all",365),setCookieConsent("analytics_consent","true",365),setCookieConsent("marketing_consent","true",365),"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted"}),hideCookieBanner()},window.rejectCookies=function(){setCookieConsent("cookie_consent","necessary",365),setCookieConsent("analytics_consent","false",365),setCookieConsent("marketing_consent","false",365),hideCookieBanner()};const consent=getCookieConsent("cookie_consent");consent?"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"true"===getCookieConsent("analytics_consent")?"granted":"denied",ad_storage:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_user_data:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_personalization:"true"===getCookieConsent("marketing_consent")?"granted":"denied"}):setTimeout(showCookieBanner,1e3);
+    </script>
+</body>
+</html>
