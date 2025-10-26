@@ -482,6 +482,24 @@
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                         body: new URLSearchParams(formData).toString()
                     }).then(() => {
+                        // Form başarıyla gönderildi - Google Analytics event
+                        if (typeof gtag !== 'undefined') {
+                            // GA4 event - Google Ads'te dönüşüm olarak import edilebilir
+                            gtag('event', 'form_submit', {
+                                'event_category': 'engagement',
+                                'event_label': 'contact_form'
+                            });
+
+                            // Google Ads conversion event
+                            // Google Ads'teki dönüşüm ayarlarından conversion_label alıp buraya ekle
+                            // Örnek: gtag('event', 'conversion', {'send_to': 'AW-17613183233/AbC1DeF2GhI3JkL4'});
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-17613183233/CONVERSION_LABEL_BURAYA',
+                                'value': 1.0,
+                                'currency': 'TRY'
+                            });
+                        }
+
                         form.style.display = 'none';
                         formMessage.textContent = 'Teşekkürler! Talebiniz başarıyla alındı. En kısa sürede size dönüş yapacağız.';
                         formMessage.className = 'form-message success';
