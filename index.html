@@ -447,8 +447,36 @@
             if(form) {
                 form.addEventListener('submit', event => {
                     event.preventDefault();
+
+                    // Form validasyonu kontrolü
+                    if (!form.checkValidity()) {
+                        // Tarayıcının varsayılan validasyon mesajlarını göster
+                        form.reportValidity();
+                        return;
+                    }
+
+                    // KVKK onayı kontrolü
+                    const kvkkCheckbox = document.getElementById('kvkk');
+                    if (!kvkkCheckbox.checked) {
+                        const formMessage = document.getElementById('formMessage');
+                        formMessage.textContent = 'Lütfen Gizlilik Politikası ve KVKK Aydınlatma Metni\'ni okuyup kabul edin.';
+                        formMessage.className = 'form-message error';
+                        formMessage.style.display = 'block';
+                        kvkkCheckbox.focus();
+                        setTimeout(() => {
+                            formMessage.style.display = 'none';
+                        }, 5000);
+                        return;
+                    }
+
                     const formData = new FormData(form);
                     const formMessage = document.getElementById('formMessage');
+                    const submitBtn = document.getElementById('submitBtn');
+
+                    // Butonu devre dışı bırak ve yükleniyor durumuna getir
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+
                     fetch('/', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -464,9 +492,7 @@
 
                             // Google Ads conversion event
                             gtag('event', 'conversion', {
-                                'send_to': 'AW-17613183233/gdZMCKPOzawbEIGyz85B',
-                                'value': 1.0,
-                                'currency': 'TRY'
+                                'send_to': 'AW-17613183233/gdZMCKPOzawbEIGyz85B'
                             });
                         }
 
@@ -474,10 +500,12 @@
                         formMessage.textContent = 'Teşekkürler! Talebiniz başarıyla alındı. En kısa sürede size dönüş yapacağız.';
                         formMessage.className = 'form-message success';
                         formMessage.style.display = 'block';
-                    }).catch(() => {
-                        formMessage.textContent = 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.';
+                    }).catch((error) => {
+                        formMessage.textContent = 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin veya doğrudan e-posta ile iletişime geçin.';
                         formMessage.className = 'form-message error';
                         formMessage.style.display = 'block';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Ücretsiz Teklif Al';
                     });
                 });
             }
@@ -488,5 +516,7 @@
     </script>
 </body>
 </html>
+
+
 
 
