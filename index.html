@@ -378,7 +378,7 @@
         <div class="cookie-modal-content">
             <div class="cookie-modal-header">
                 <h2>Çerez Ayarları</h2>
-                <button class="cookie-modal-close" onclick="closeCookieSettings()">
+                <button class="cookie-modal-close" onclick="closeCookieSettings()" aria-label="Çerez ayarlarını kapat">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
@@ -386,6 +386,7 @@
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-shield-alt"></i> Zorunlu Çerezler</h3>
                     <label class="cookie-toggle">
+                        <span class="sr-only">Zorunlu çerezleri etkinleştir (devre dışı bırakılamaz)</span>
                         <input type="checkbox" id="essential-cookies" checked disabled>
                         <span class="cookie-toggle-slider"></span>
                     </label>
@@ -396,6 +397,7 @@
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-chart-line"></i> Analitik Çerezler</h3>
                     <label class="cookie-toggle">
+                        <span class="sr-only">Analitik çerezleri etkinleştir</span>
                         <input type="checkbox" id="analytics-cookies">
                         <span class="cookie-toggle-slider"></span>
                     </label>
@@ -406,6 +408,7 @@
                 <div class="cookie-category-header">
                     <h3><i class="fas fa-bullhorn"></i> Pazarlama Çerezleri</h3>
                     <label class="cookie-toggle">
+                        <span class="sr-only">Pazarlama çerezlerini etkinleştir</span>
                         <input type="checkbox" id="marketing-cookies">
                         <span class="cookie-toggle-slider"></span>
                     </label>
