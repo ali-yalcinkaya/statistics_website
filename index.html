@@ -47,6 +47,8 @@
     <!-- Merkezi Stil ve Font Awesome -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -73,7 +75,7 @@
 
     <!-- Hero Section -->
     <section id="anasayfa" class="hero">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h1>Akademik Araştırmanız İçin<br>Profesyonel İstatistiksel Danışmanlık</h1>
             <p>Tez, Makale ve Araştırma Projeleriniz için SPSS, R ve Python ile Güvenilir Veri Analizi</p>
             <div class="cta-buttons">
@@ -87,20 +89,20 @@
     <div class="stats-bar">
         <div class="container">
             <div class="stats">
-                <div class="stat-item">
-                    <h3>70+</h3>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="counter" data-target="70">0</h3>
                     <p>Tamamlanan Tez</p>
                 </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="counter" data-target="50">0</h3>
                     <p>Yayınlanan Makale</p>
                 </div>
-                <div class="stat-item">
-                    <h3>8+</h3>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="counter" data-target="8">0</h3>
                     <p>Yıllık Deneyim</p>
                 </div>
-                <div class="stat-item">
-                    <h3>%97</h3>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>%<span class="counter" data-target="97">0</span></h3>
                     <p>Müşteri Memnuniyeti</p>
                 </div>
             </div>
@@ -114,7 +116,7 @@
             <p class="section-subtitle">Akademik araştırmanızın her aşamasında yanınızdayız</p>
             
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="service-icon"><i class="fas fa-file-alt"></i></div>
                     <h3>Tez İstatistik Danışmanlığı</h3>
                     <p>Yüksek lisans ve doktora tezleriniz için kapsamlı istatistiksel destek</p>
@@ -127,7 +129,7 @@
                         <li>APA formatında raporlama</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon"><i class="fas fa-database"></i></div>
                     <h3>Nicel Veri Analizi</h3>
                     <p>Sayısal verilerinizi güçlü istatistiksel yöntemlerle analiz ediyoruz</p>
@@ -140,7 +142,7 @@
                         <li>Kümeleme ve Ayırma analizi</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon"><i class="fas fa-comments"></i></div>
                     <h3>Nitel Veri Analizi</h3>
                     <p>Görüşme ve doküman verilerinizin sistematik analizi</p>
@@ -152,7 +154,7 @@
                         <li>Bulguların raporlanması</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
                     <h3>Biyoistatistik Danışmanlığı</h3>
                     <p>Sağlık bilimleri araştırmaları için özel analiz hizmetleri</p>
@@ -164,7 +166,7 @@
                         <li>Güç analizi ve örneklem hesaplama</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon"><i class="fas fa-code"></i></div>
                     <h3>İleri Düzey Programlama</h3>
                     <p>R ve Python ile özelleştirilmiş analiz çözümleri</p>
@@ -177,7 +179,7 @@
                         <li>Büyük veri analizi</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Danışmanlık ve Mentorluk</h3>
                     <p>İstatistiksel yöntemleri anlamanız için rehberlik</p>
@@ -199,12 +201,12 @@
             <h2 class="section-title">Çalışma Sürecimiz</h2>
             <p class="section-subtitle">Şeffaf ve adım adım ilerleyen profesyonel bir süreç</p>
             <div class="process-steps">
-                <div class="step"><div class="step-number">1</div><h3>İlk Görüşme</h3><p>Araştırmanızı, hedeflerinizi ve ihtiyaçlarınızı detaylı olarak dinliyoruz. Ücretsiz ön değerlendirme yapıyoruz.</p></div>
-                <div class="step"><div class="step-number">2</div><h3>Veri İnceleme</h3><p>Verilerinizi inceliyor, uygun analiz yöntemlerini belirliyoruz. Detaylı bir çalışma planı ve fiyat teklifi sunuyoruz.</p></div>
-                <div class="step"><div class="step-number">3</div><h3>Veri Hazırlama</h3><p>Verilerinizi temizliyor, kodluyor ve analize hazır hale getiriyoruz. Eksik veriler ve uç değerler kontrol ediliyor.</p></div>
-                <div class="step"><div class="step-number">4</div><h3>İstatistiksel Analiz</h3><p>Belirlenen yöntemlerle analizleri gerçekleştiriyoruz. Varsayımlar kontrol ediliyor, sonuçlar doğrulanıyor.</p></div>
-                <div class="step"><div class="step-number">5</div><h3>Raporlama</h3><p>Tüm analizleri, tabloları ve grafikleri içeren detaylı bir rapor hazırlıyoruz. APA formatında sunuyoruz.</p></div>
-                <div class="step"><div class="step-number">6</div><h3>Sunum ve Revizyon</h3><p>Sonuçları sizinle paylaşıyor, yorumluyoruz. Gerekli revizyonları ücretsiz olarak yapıyoruz.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="0"><div class="step-number">1</div><h3>İlk Görüşme</h3><p>Araştırmanızı, hedeflerinizi ve ihtiyaçlarınızı detaylı olarak dinliyoruz. Ücretsiz ön değerlendirme yapıyoruz.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="100"><div class="step-number">2</div><h3>Veri İnceleme</h3><p>Verilerinizi inceliyor, uygun analiz yöntemlerini belirliyoruz. Detaylı bir çalışma planı ve fiyat teklifi sunuyoruz.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="200"><div class="step-number">3</div><h3>Veri Hazırlama</h3><p>Verilerinizi temizliyor, kodluyor ve analize hazır hale getiriyoruz. Eksik veriler ve uç değerler kontrol ediliyor.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="300"><div class="step-number">4</div><h3>İstatistiksel Analiz</h3><p>Belirlenen yöntemlerle analizleri gerçekleştiriyoruz. Varsayımlar kontrol ediliyor, sonuçlar doğrulanıyor.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="400"><div class="step-number">5</div><h3>Raporlama</h3><p>Tüm analizleri, tabloları ve grafikleri içeren detaylı bir rapor hazırlıyoruz. APA formatında sunuyoruz.</p></div>
+                <div class="step" data-aos="fade-up" data-aos-delay="500"><div class="step-number">6</div><h3>Sunum ve Revizyon</h3><p>Sonuçları sizinle paylaşıyor, yorumluyoruz. Gerekli revizyonları ücretsiz olarak yapıyoruz.</p></div>
             </div>
         </div>
     </section>
@@ -215,7 +217,7 @@
             <h2 class="section-title">Müşteri Yorumları</h2>
             <p class="section-subtitle">Hizmetlerimizden memnun kalan danışanlarımızın görüşleri</p>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="testimonial-author">
                         <div>
                             <h4 class="author-name">Dr. E*** Y****</h4>
@@ -225,7 +227,7 @@
                     <p class="testimonial-text">"Tezimin istatistik analizi konusunda tıkandığım bir noktada Ali Bey ile çalıştık. Bu noktada verimi anlaşılır ve bilimsel bir temelde analiz ederek harika bir rapor sundu. Süreç boyunca iletişimi ve profesyonelliği sayesinde tezimi zamanında ve güvenle teslim ettim."</p>
                     <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-author">
                         <div>
                             <h4 class="author-name">A**** Ç****</h4>
@@ -235,7 +237,7 @@
                     <p class="testimonial-text">"SPSS analizi konusunda desteğe ihtiyacım vardı. Sadece analizleri yapmakla kalmadı, aynı zamanda sonuçları nasıl yorumlamam gerektiğini de detaylıca anlattı. Akademik bilgisi ve tecrübesi gerçekten fark yaratıyor. Kesinlikle tavsiye ederim."</p>
                     <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-author">
                         <div>
                             <h4 class="author-name">Z**** K***</h4>
@@ -255,12 +257,12 @@
             <h2 class="section-title">Kullandığımız Profesyonel Araçlar</h2>
             <p class="section-subtitle">En güncel ve güçlü istatistik yazılımları</p>
             <div class="tools-grid">
-                <div class="tool-item"><div class="tool-icon"><i class="fas fa-chart-bar"></i></div><h4>SPSS</h4></div>
-                <div class="tool-item"><div class="tool-icon"><i class="fab fa-r-project"></i></div><h4>R</h4></div>
-                <div class="tool-item"><div class="tool-icon"><i class="fas fa-chart-area"></i></div><h4>Jamovi</h4></div>
-                <div class="tool-item"><div class="tool-icon"><i class="fab fa-python"></i></div><h4>Python</h4></div>
-                <div class="tool-item"><div class="tool-icon"><i class="fas fa-project-diagram"></i></div><h4>AMOS</h4></div>
-                <div class="tool-item"><div class="tool-icon"><i class="fas fa-database"></i></div><h4>Stata</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="0"><div class="tool-icon"><i class="fas fa-chart-bar"></i></div><h4>SPSS</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="100"><div class="tool-icon"><i class="fab fa-r-project"></i></div><h4>R</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="200"><div class="tool-icon"><i class="fas fa-chart-area"></i></div><h4>Jamovi</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="300"><div class="tool-icon"><i class="fab fa-python"></i></div><h4>Python</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="400"><div class="tool-icon"><i class="fas fa-project-diagram"></i></div><h4>AMOS</h4></div>
+                <div class="tool-item" data-aos="zoom-in" data-aos-delay="500"><div class="tool-icon"><i class="fas fa-database"></i></div><h4>Stata</h4></div>
             </div>
         </div>
     </section>
@@ -532,6 +534,10 @@
             function showCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="block")}function hideCookieBanner(){const e=document.getElementById("cookie-consent-banner");e&&(e.style.display="none")}function setCookieConsent(e,t,o){const n=new Date;n.setTime(n.getTime()+24*o*60*60*1e3),document.cookie=e+"="+t+";expires="+n.toUTCString()+";path=/;SameSite=Lax"}function getCookieConsent(e){const t=e+"=";const o=document.cookie.split(";");for(let e=0;e<o.length;e++){let n=o[e];for(;" "===n.charAt(0);)n=n.substring(1,n.length);if(0===n.indexOf(t))return n.substring(t.length,n.length)}return null}window.acceptAllCookies=function(){setCookieConsent("cookie_consent","all",365),setCookieConsent("analytics_consent","true",365),setCookieConsent("marketing_consent","true",365),"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted"}),hideCookieBanner()},window.rejectCookies=function(){setCookieConsent("cookie_consent","necessary",365),setCookieConsent("analytics_consent","false",365),setCookieConsent("marketing_consent","false",365),hideCookieBanner()},window.openCookieSettings=function(){const e=document.getElementById("cookie-settings-modal");e&&(e.style.display="block",document.getElementById("analytics-cookies").checked="true"===getCookieConsent("analytics_consent"),document.getElementById("marketing-cookies").checked="true"===getCookieConsent("marketing_consent"))},window.closeCookieSettings=function(){const e=document.getElementById("cookie-settings-modal");e&&(e.style.display="none")},window.acceptAllFromModal=function(){document.getElementById("analytics-cookies").checked=!0,document.getElementById("marketing-cookies").checked=!0,saveAndClose()},window.saveAndClose=function(){const e=document.getElementById("analytics-cookies").checked,t=document.getElementById("marketing-cookies").checked;setCookieConsent("cookie_consent","custom",365),setCookieConsent("analytics_consent",e,365),setCookieConsent("marketing_consent",t,365),"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:e?"granted":"denied",ad_storage:t?"granted":"denied",ad_user_data:t?"granted":"denied",ad_personalization:t?"granted":"denied"}),closeCookieSettings(),hideCookieBanner()};const consent=getCookieConsent("cookie_consent");consent?"undefined"!=typeof gtag&&gtag("consent","update",{analytics_storage:"true"===getCookieConsent("analytics_consent")?"granted":"denied",ad_storage:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_user_data:"true"===getCookieConsent("marketing_consent")?"granted":"denied",ad_personalization:"true"===getCookieConsent("marketing_consent")?"granted":"denied"}):setTimeout(showCookieBanner,1e3);window.addEventListener("click",function(e){const t=document.getElementById("cookie-settings-modal");e.target===t&&closeCookieSettings()});
         });
     </script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Animations -->
+    <script src="js/animations.js"></script>
 </body>
 </html>
 
